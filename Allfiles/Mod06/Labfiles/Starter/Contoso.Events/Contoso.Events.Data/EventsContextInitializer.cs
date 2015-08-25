@@ -5,7 +5,7 @@ using System.Data.Entity;
 
 namespace Contoso.Events.Data
 {
-    public class EventsContextInitializer : CreateDatabaseIfNotExists<EventsContext>
+    public class EventsContextInitializer : DropCreateDatabaseIfModelChanges<EventsContext>
     {
         protected override void Seed(EventsContext context)
         {
