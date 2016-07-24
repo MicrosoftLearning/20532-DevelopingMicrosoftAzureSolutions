@@ -21,7 +21,7 @@
     "networkSecurityGroupNamePrefix": "nsg",
     "storageAccountName": "[concat(variables('storageNamePrefix'), variables('coursePrefix'), parameters('yourName'))]",
     "networkInterfaceCardName": "[concat(variables('networkInterfaceCardNamePrefix'), variables('coursePrefix'))]",
-    "publicIPAddressDNSName": "[concat(variables('publicIPAddressNamePrefix'), variables('coursePrefix'), variables('coursePrefix'))]",
+    "publicIPAddressDNSName": "[concat(variables('publicIPAddressNamePrefix'), variables('coursePrefix'), variables('yourName'))]",
     "publicIPAddressName": "[concat(variables('publicIPAddressNamePrefix'), variables('coursePrefix'))]",
     "networkSecurityGroupName": "[concat(variables('networkSecurityGroupNamePrefix'), variables('coursePrefix'))]",
     "virtualMachineName": "[concat(variables('virtualMachineNamePrefix'), variables('coursePrefix'))]",
