@@ -19,11 +19,11 @@
     "networkInterfaceCardNamePrefix": "nic",
     "publicIPAddressNamePrefix": "pip",
     "networkSecurityGroupNamePrefix": "nsg",
-    "virtualMachineName": "[concat(variables('virtualMachineNamePrefix'), variables('coursePrefix'), parameters('yourName'))]",
     "storageAccountName": "[concat(variables('storageNamePrefix'), variables('coursePrefix'), parameters('yourName'))]",
     "networkInterfaceCardName": "[concat(variables('networkInterfaceCardNamePrefix'), variables('coursePrefix'))]",
     "publicIPAddressName": "[concat(variables('publicIPAddressNamePrefix'), variables('coursePrefix'))]",
     "networkSecurityGroupName": "[concat(variables('networkSecurityGroupNamePrefix'), variables('coursePrefix'))]",
+    "virtualMachineName": "[concat(variables('virtualMachineNamePrefix'), variables('coursePrefix'))]",
     "virtualNetworkName": "[concat(variables('virtualNetworkNamePrefix'), variables('coursePrefix'))]",
     "imagePublisher": "MicrosoftVisualStudio",
     "imageOffer": "VisualStudio",
@@ -38,7 +38,10 @@
     "storageAccountType": "Standard_LRS",
     "publicIpAddressType": "Dynamic",
     "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
-    "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]"
+    "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
+    "dscExtensionName": "DSCExtension",
+    "dscConfigurationFunction": "ConfigureDev.ps1\\ConfigureDev",
+    "dscModulesUrl": "https://gist.github.com/SidneyAndrewsOpsgility/db3935cb207748e998e8/raw/1335c906f681eac77b113d0058af8a5061af9bde/AzureDev.zip"
   },
   "resources": [
     {
@@ -179,6 +182,30 @@
           }
         ]
       }
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "name": "[concat(variables('virtualMachineName'), '/', variables('dscExtensionName'))]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "publisher": "Microsoft.Powershell",
+        "type": "DSC",
+        "typeHandlerVersion": "2.0",
+        "autoUpgradeMinorVersion": "true",
+        "settings": {
+          "ModulesUrl": "[variables('dscModulesUrl')]",
+          "SasToken": "",
+          "ConfigurationFunction": "[variables('dscConfigurationFunction')]",
+          "Properties": {
+            "MachineName": "[variables('virtualMachineName')]"
+          }
+        },
+        "protectedSettings": null
+      },
+      "dependsOn": [
+        "[concat('Microsoft.Compute/virtualMachines/', variables('virtualMachineName'))]"
+      ]
     }
   ]
 }
