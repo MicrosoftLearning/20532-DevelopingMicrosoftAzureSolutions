@@ -42,7 +42,7 @@
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
     "dscExtensionName": "DSCExtension",
     "dscConfigurationFunction": "ConfigureDev.ps1\\ConfigureDev",
-    "dscModulesUrl": "https://github.com/seesharprun/20532-DevelopingMicrosoftAzureSolutions/raw/c-release/ARM/ConfigureDev.ps1.zip"
+    "dscModulesUrl": "https://github.com/seesharprun/20532-DevelopingMicrosoftAzureSolutions/raw/c-release/ARM/ConfigureDev.zip"
   },
   "resources": [
     {
@@ -200,10 +200,7 @@
         "settings": {
           "ModulesUrl": "[variables('dscModulesUrl')]",
           "SasToken": "",
-          "ConfigurationFunction": "[variables('dscConfigurationFunction')]",
-          "Properties": {
-            "MachineName": "[variables('virtualMachineName')]"
-          }
+          "ConfigurationFunction": "[variables('dscConfigurationFunction')]"
         },
         "protectedSettings": null
       },
