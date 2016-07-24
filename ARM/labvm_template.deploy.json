@@ -1,0 +1,212 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "yourName": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 10,
+      "metadata": {
+        "description": "Your name to use as a suffix when creating services"
+      }
+    }
+  },
+  "variables": {
+    "coursePrefix": "20532",
+    "storageNamePrefix": "stor",
+    "virtualMachineNamePrefix": "vm",
+    "virtualNetworkNamePrefix": "vnet",
+    "networkInterfaceCardNamePrefix": "nic",
+    "publicIPAddressNamePrefix": "pip",
+    "networkSecurityGroupNamePrefix": "nsg",
+    "storageAccountName": "[concat(variables('storageNamePrefix'), variables('coursePrefix'), parameters('yourName'))]",
+    "publicIPAddressDNSName": "[concat(variables('publicIPAddressNamePrefix'), variables('coursePrefix'), variables('yourName'))]",
+    "networkInterfaceCardName": "[concat(variables('networkInterfaceCardNamePrefix'), variables('coursePrefix'))]",
+    "publicIPAddressName": "[concat(variables('publicIPAddressNamePrefix'), variables('coursePrefix'))]",
+    "networkSecurityGroupName": "[concat(variables('networkSecurityGroupNamePrefix'), variables('coursePrefix'))]",
+    "virtualMachineName": "[concat(variables('virtualMachineNamePrefix'), variables('coursePrefix'))]",
+    "virtualNetworkName": "[concat(variables('virtualNetworkNamePrefix'), variables('coursePrefix'))]",
+    "imagePublisher": "MicrosoftVisualStudio",
+    "imageOffer": "VisualStudio",
+    "imageSku": "VS-2015-Comm-AzureSDK-2.9-WS2012R2",
+    "imageVersion": "latest",
+    "virtualMachineSize": "Standard_F4",
+    "adminUsername": "Student",
+    "adminPassword": "AzurePa$$w0rd",
+    "vnetAddress": "10.0.0.0/16",
+    "subnetName": "Apps",
+    "subnetAddress": "10.0.0.0/24",
+    "storageAccountType": "Standard_LRS",
+    "publicIpAddressType": "Dynamic",
+    "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
+    "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
+    "dscExtensionName": "DSCExtension",
+    "dscConfigurationFunction": "ConfigureDev.ps1\\ConfigureDev",
+    "dscModulesUrl": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/c-release/ARM/ConfigureDev.ps1.zip"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "name": "[variables('storageAccountName')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "accountType": "[variables('storageAccountType')]"
+      }
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks",
+      "name": "[variables('virtualNetworkName')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "[variables('vnetAddress')]"
+          ]
+        },
+        "subnets": [
+          {
+            "name": "[variables('subnetName')]",
+            "properties": {
+              "addressPrefix": "[variables('subnetAddress')]"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines",
+      "name": "[variables('virtualMachineName')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "osProfile": {
+          "computerName": "[variables('virtualMachineName')]",
+          "adminUsername": "[variables('adminUsername')]",
+          "adminPassword": "[variables('adminPassword')]",
+          "windowsConfiguration": {
+            "provisionVmAgent": "true"
+          }
+        },
+        "hardwareProfile": {
+          "vmSize": "[variables('virtualMachineSize')]"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "[variables('imagePublisher')]",
+            "offer": "[variables('imageOffer')]",
+            "sku": "[variables('imageSku')]",
+            "version": "[variables('imageVersion')]"
+          },
+          "osDisk": {
+            "name": "[variables('virtualMachineName')]",
+            "vhd": {
+              "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), variables('virtualMachineName'), '201662416594.vhd')]"
+            },
+            "createOption": "fromImage"
+          },
+          "dataDisks": [ ]
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaceCardName'))]"
+            }
+          ]
+        }
+      },
+      "dependsOn": [
+        "[concat('Microsoft.Network/networkInterfaces/', variables('networkInterfaceCardName'))]",
+        "[concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/networkInterfaces",
+      "name": "[variables('networkInterfaceCardName')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "primary": true,
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "subnet": {
+                "id": "[variables('subnetRef')]"
+              },
+              "privateIPAllocationMethod": "Dynamic",
+              "publicIpAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIpAddresses', variables('publicIpAddressName'))]"
+              }
+            }
+          }
+        ],
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
+        }
+      },
+      "dependsOn": [
+        "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]",
+        "[concat('Microsoft.Network/publicIpAddresses/', variables('publicIpAddressName'))]",
+        "[concat('Microsoft.Network/networkSecurityGroups/', variables('networkSecurityGroupName'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/publicIpAddresses",
+      "name": "[variables('publicIpAddressName')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "publicIpAllocationMethod": "[variables('publicIpAddressType')]",
+        "dnsSettings": {
+          "domainNameLabel": "[variables('publicIPAddressDNSName')]"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "name": "[variables('networkSecurityGroupName')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "allow-rdp",
+            "properties": {
+              "priority": 1000,
+              "sourceAddressPrefix": "*",
+              "protocol": "*",
+              "destinationPortRange": "3389",
+              "access": "Allow",
+              "direction": "inbound",
+              "sourcePortRange": "*",
+              "destinationAddressPrefix": "*"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "name": "[concat(variables('virtualMachineName'), '/', variables('dscExtensionName'))]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "publisher": "Microsoft.Powershell",
+        "type": "DSC",
+        "typeHandlerVersion": "2.0",
+        "autoUpgradeMinorVersion": "true",
+        "settings": {
+          "ModulesUrl": "[variables('dscModulesUrl')]",
+          "SasToken": "",
+          "ConfigurationFunction": "[variables('dscConfigurationFunction')]"
+        },
+        "protectedSettings": null
+      },
+      "dependsOn": [
+        "[concat('Microsoft.Compute/virtualMachines/', variables('virtualMachineName'))]"
+      ]
+    }
+  ]
+}
