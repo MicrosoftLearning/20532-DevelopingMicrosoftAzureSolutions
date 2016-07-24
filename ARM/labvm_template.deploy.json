@@ -41,7 +41,7 @@
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
     "dscExtensionName": "DSCExtension",
     "dscConfigurationFunction": "ConfigureDev.ps1\\ConfigureDev",
-    "dscModulesUrl": "https://gist.github.com/SidneyAndrewsOpsgility/db3935cb207748e998e8/raw/1335c906f681eac77b113d0058af8a5061af9bde/AzureDev.zip"
+    "dscModulesUrl": "https://github.com/seesharprun/20532-DevelopingMicrosoftAzureSolutions/raw/c-release/ARM/ConfigureDev.zip"
   },
   "resources": [
     {
