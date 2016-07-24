@@ -1,7 +1,8 @@
 Configuration ConfigureDev
 {
     Import-DscResource -ModuleName xSystemSecurity
-	Node localhost
+  
+	Node ("localhost")
 	{ 
         xIEESc DscIE {
             UserRole = "Users"
