@@ -18,3 +18,8 @@
 
 ## What about changes to the student handbook?
 * The student handbook will get updated on a regular basis through normal MOC release channels as needed basis.  
+
+## Notes
+
+### ARM Template
+This repo includes an ARM template (located in the [ARM](/ARM) folder) that can be deployed in-lieu of doing the second lab. This is useful for scenarios where you need to catch up a student after they deployment has failed.
