@@ -1,13 +1,17 @@
 Configuration ConfigureDev
 {
   Import-DscResource -ModuleName xSystemSecurity
-
   Node ("localhost")
   {
     xIEESc DscIE
     {
-        UserRole = "Users"
-        IsEnabled = $false
+      UserRole = "Administrators"
+      IsEnabled = $false
+    }
+    xIEESc DscIE
+    {
+      UserRole = "Users"
+      IsEnabled = $false
     }
   }
 }
