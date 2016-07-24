@@ -21,6 +21,7 @@
     "networkSecurityGroupNamePrefix": "nsg",
     "storageAccountName": "[concat(variables('storageNamePrefix'), variables('coursePrefix'), parameters('yourName'))]",
     "networkInterfaceCardName": "[concat(variables('networkInterfaceCardNamePrefix'), variables('coursePrefix'))]",
+    "publicIPAddressDNSName": "[concat(variables('publicIPAddressNamePrefix'), variables('coursePrefix'), variables('coursePrefix'))]",
     "publicIPAddressName": "[concat(variables('publicIPAddressNamePrefix'), variables('coursePrefix'))]",
     "networkSecurityGroupName": "[concat(variables('networkSecurityGroupNamePrefix'), variables('coursePrefix'))]",
     "virtualMachineName": "[concat(variables('virtualMachineNamePrefix'), variables('coursePrefix'))]",
@@ -41,7 +42,7 @@
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
     "dscExtensionName": "DSCExtension",
     "dscConfigurationFunction": "ConfigureDev.ps1\\ConfigureDev",
-    "dscModulesUrl": "https://github.com/seesharprun/20532-DevelopingMicrosoftAzureSolutions/raw/c-release/ARM/ConfigureDev.zip"
+    "dscModulesUrl": "https://github.com/seesharprun/20532-DevelopingMicrosoftAzureSolutions/raw/c-release/ARM/ConfigureDev.ps1.zip"
   },
   "resources": [
     {
@@ -157,7 +158,10 @@
       "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
       "properties": {
-        "publicIpAllocationMethod": "[variables('publicIpAddressType')]"
+        "publicIpAllocationMethod": "[variables('publicIpAddressType')]",
+        "dnsSettings": {
+          "domainNameLabel": "[variables('publicIPAddressDNSName')]"
+        }
       }
     },
     {
