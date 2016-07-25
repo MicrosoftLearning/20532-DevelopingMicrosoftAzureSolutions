@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{CD0CD146-23D4-4B68-8519-E108475F0A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.Data", "Contoso.Events.Data\Contoso.Events.Data.csproj", "{54891392-7B3E-4AC8-840C-FA57C4765694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.Models", "Contoso.Events.Models\Contoso.Events.Models.csproj", "{8E0D7C38-4ACA-437E-8091-5A4B340A848A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.ViewModels", "Contoso.Events.ViewModels\Contoso.Events.ViewModels.csproj", "{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.Web", "Contoso.Events.Web\Contoso.Events.Web.csproj", "{273D354C-041F-45FD-B738-D117959EF34D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.DataGeneration", "Contoso.Events.DataGeneration\Contoso.Events.DataGeneration.csproj", "{72A28E07-87C2-4E8F-BAB5-BEAF6CF17EC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54891392-7B3E-4AC8-840C-FA57C4765694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54891392-7B3E-4AC8-840C-FA57C4765694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54891392-7B3E-4AC8-840C-FA57C4765694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54891392-7B3E-4AC8-840C-FA57C4765694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E0D7C38-4ACA-437E-8091-5A4B340A848A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0D7C38-4ACA-437E-8091-5A4B340A848A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0D7C38-4ACA-437E-8091-5A4B340A848A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0D7C38-4ACA-437E-8091-5A4B340A848A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{273D354C-041F-45FD-B738-D117959EF34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{273D354C-041F-45FD-B738-D117959EF34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{273D354C-041F-45FD-B738-D117959EF34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{273D354C-041F-45FD-B738-D117959EF34D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A28E07-87C2-4E8F-BAB5-BEAF6CF17EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A28E07-87C2-4E8F-BAB5-BEAF6CF17EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A28E07-87C2-4E8F-BAB5-BEAF6CF17EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A28E07-87C2-4E8F-BAB5-BEAF6CF17EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54891392-7B3E-4AC8-840C-FA57C4765694} = {CD0CD146-23D4-4B68-8519-E108475F0A85}
+		{8E0D7C38-4ACA-437E-8091-5A4B340A848A} = {CD0CD146-23D4-4B68-8519-E108475F0A85}
+		{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4} = {CD0CD146-23D4-4B68-8519-E108475F0A85}
+	EndGlobalSection
+EndGlobal
