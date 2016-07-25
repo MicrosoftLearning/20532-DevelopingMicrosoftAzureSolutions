@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{C5B63C4A-E512-4139-9BBE-9529FCF31098}"
 EndProject
@@ -17,13 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.Data", "Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.ViewModels", "Contoso.Events.ViewModels\Contoso.Events.ViewModels.csproj", "{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.Worker", "Contoso.Events.Worker\Contoso.Events.Worker.csproj", "{52BA64DA-3ECA-4F96-8DB2-9C95179853D0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.Documents", "Contoso.Events.Documents\Contoso.Events.Documents.csproj", "{EED5CE14-2027-4E1F-93F9-FEFD56BFCD41}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.Data.Generation", "Contoso.Events.DataGeneration\Contoso.Events.Data.Generation.csproj", "{FB331FCD-563B-4C27-BEC8-3531D45DA6CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.Management", "Contoso.Events.Management\Contoso.Events.Management.csproj", "{4946DDCE-2D81-4452-82B8-7CAD9CB43712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Events.Worker", "Contoso.Events.Worker\Contoso.Events.Worker.csproj", "{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,14 +67,6 @@ Global
 		{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4}.Release|ARM.ActiveCfg = Release|Any CPU
 		{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4}.Release|x86.ActiveCfg = Release|Any CPU
-		{52BA64DA-3ECA-4F96-8DB2-9C95179853D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52BA64DA-3ECA-4F96-8DB2-9C95179853D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52BA64DA-3ECA-4F96-8DB2-9C95179853D0}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{52BA64DA-3ECA-4F96-8DB2-9C95179853D0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{52BA64DA-3ECA-4F96-8DB2-9C95179853D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52BA64DA-3ECA-4F96-8DB2-9C95179853D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52BA64DA-3ECA-4F96-8DB2-9C95179853D0}.Release|ARM.ActiveCfg = Release|Any CPU
-		{52BA64DA-3ECA-4F96-8DB2-9C95179853D0}.Release|x86.ActiveCfg = Release|Any CPU
 		{EED5CE14-2027-4E1F-93F9-FEFD56BFCD41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EED5CE14-2027-4E1F-93F9-FEFD56BFCD41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EED5CE14-2027-4E1F-93F9-FEFD56BFCD41}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -99,6 +91,18 @@ Global
 		{4946DDCE-2D81-4452-82B8-7CAD9CB43712}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4946DDCE-2D81-4452-82B8-7CAD9CB43712}.Release|ARM.ActiveCfg = Release|Any CPU
 		{4946DDCE-2D81-4452-82B8-7CAD9CB43712}.Release|x86.ActiveCfg = Release|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Debug|x86.Build.0 = Debug|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Release|ARM.Build.0 = Release|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Release|x86.ActiveCfg = Release|Any CPU
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,9 +112,9 @@ Global
 		{8E0D7C38-4ACA-437E-8091-5A4B340A848A} = {C5B63C4A-E512-4139-9BBE-9529FCF31098}
 		{54891392-7B3E-4AC8-840C-FA57C4765694} = {C5B63C4A-E512-4139-9BBE-9529FCF31098}
 		{1D9C61C2-C6C2-4E3A-B68A-54CE61E980C4} = {C5B63C4A-E512-4139-9BBE-9529FCF31098}
-		{52BA64DA-3ECA-4F96-8DB2-9C95179853D0} = {691525FF-4F30-402A-8B74-4A47D0E4702B}
 		{EED5CE14-2027-4E1F-93F9-FEFD56BFCD41} = {C5B63C4A-E512-4139-9BBE-9529FCF31098}
 		{FB331FCD-563B-4C27-BEC8-3531D45DA6CD} = {C5B63C4A-E512-4139-9BBE-9529FCF31098}
 		{4946DDCE-2D81-4452-82B8-7CAD9CB43712} = {B53E52F3-8586-493C-A7A6-C5E8FFCD9090}
+		{76562BEB-9A33-4363-9DDE-6FEE4A063C1B} = {691525FF-4F30-402A-8B74-4A47D0E4702B}
 	EndGlobalSection
 EndGlobal

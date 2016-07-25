@@ -1,6 +1,6 @@
 ﻿using Contoso.Events.Data;
 using Contoso.Events.Models;
-using Microsoft.ServiceBus.Notifications;
+using Microsoft.Azure.NotificationHubs;
 using System;
 using System.IO;
 using System.Linq;

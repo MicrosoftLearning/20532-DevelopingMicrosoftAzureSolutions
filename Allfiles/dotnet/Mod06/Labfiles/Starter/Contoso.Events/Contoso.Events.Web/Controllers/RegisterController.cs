@@ -6,6 +6,7 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Configuration;
 using System.Net;
 using System.Net.Http;
 using System.Web;

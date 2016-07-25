@@ -2,7 +2,7 @@
 using Contoso.Events.Models;
 using Microsoft.ServiceBus;
 using Microsoft.ServiceBus.Messaging;
-using Microsoft.WindowsAzure;
+using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Queue;
 using Newtonsoft.Json;

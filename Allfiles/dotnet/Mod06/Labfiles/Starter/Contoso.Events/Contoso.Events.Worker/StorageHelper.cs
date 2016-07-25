@@ -1,5 +1,6 @@
-﻿using Microsoft.WindowsAzure;
+﻿using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
+using System.Configuration;
 
 namespace Contoso.Events.Worker
 {
@@ -9,7 +10,7 @@ namespace Contoso.Events.Worker
 
         public StorageHelper()
         {
-            this.StorageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("Microsoft.WindowsAzure.Storage.ConnectionString"));
+            this.StorageAccount = CloudStorageAccount.Parse(ConfigurationManager.AppSettings["StorageConnectionString"]);
         }
     }
 }
