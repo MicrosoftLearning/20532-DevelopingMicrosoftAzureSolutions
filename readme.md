@@ -41,4 +41,4 @@ This repo includes an ARM template (located in the [ARM](/ARM) folder) that can 
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
-> **MCTs:** Refer to the '20532C GitHub User Guide for MCTs.docx' file on the Download Center for detailed instructions for using GitHub. This document is also available on the GitHub repo as 20532CGitHubUserGuideforMCTs.md.  
+> **MCTs:** Refer to the '20532C GitHub User Guide for MCTs.docx' file on the Download Center for detailed instructions for using GitHub. This document is also available on the GitHub repo as [20532C GitHub UserGuide for MCTs](20532CGitHubUserGuideforMCTs.md).  
