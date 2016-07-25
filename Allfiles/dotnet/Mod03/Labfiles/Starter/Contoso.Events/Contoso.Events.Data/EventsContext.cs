@@ -11,7 +11,7 @@ namespace Contoso.Events.Data
         }
 
         public EventsContext()
-            : base("EventsContextConnectionString")
+            : base("defaultConnection")
         { }
 
         public DbSet<Event> Events { get; set; }

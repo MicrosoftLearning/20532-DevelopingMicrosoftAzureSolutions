@@ -24,8 +24,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY17SepGeneralConference",
-                          StartTime = DateTime.Parse("9/7/2017 3:40:00 PM"),
-                          EndTime = DateTime.Parse("9/11/2017 3:40:00 AM"),
+                          StartTime = new DateTime(2017, 9, 7, 3, 40, 00),
+                          EndTime = new DateTime(2017, 9, 11, 3, 40, 00),
                           Title = "FY17 September Technical Conference",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 21
@@ -33,8 +33,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY20MayGeneralConference",
-                          StartTime = DateTime.Parse("5/16/2020 11:34:00 AM"),
-                          EndTime = DateTime.Parse("5/19/2020 11:34:00 PM"),
+                          StartTime = new DateTime(2020, 5, 16, 11, 34, 00),
+                          EndTime = new DateTime(2020, 5, 19, 11, 34, 00),
                           Title = "FY20 May Sales Conference",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 22
@@ -42,8 +42,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY20AprGeneralConference",
-                          StartTime = DateTime.Parse("4/1/2020 9:46:00 PM"),
-                          EndTime = DateTime.Parse("4/5/2020 9:46:00 AM"),
+                          StartTime = new DateTime(2020, 4, 1, 9, 46, 00),
+                          EndTime = new DateTime(2020, 4, 5, 9, 46, 00),
                           Title = "FY20 April General Conferece",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 13
@@ -51,8 +51,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY19MayGeneralConference",
-                          StartTime = DateTime.Parse("5/24/2019 2:22:00 PM"),
-                          EndTime = DateTime.Parse("5/28/2019 2:22:00 AM"),
+                          StartTime = new DateTime(2019, 5, 24, 2, 22, 00),
+                          EndTime = new DateTime(2019, 5, 28, 2, 22, 00),
                           Title = "FY19 May Internal Conference",
                           Description = "Lorem ipsum dolor sit amet, &lt;strong&gt;consectetur adipiscing&lt;/strong&gt; elit. Donec vulputate, dolor vitae iaculis varius, nibh dolor ultricies massa, aliquam commodo nunc enim molestie mi. Proin molestie ornare sagittis. Fusce ultricies eleifend magna adipiscing egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla scelerisque ut elit vel dapibus. Nunc non ligula posuere, euismod eros euismod, convallis lacus. Nam lacus sem, consequat sed nisl sed, mattis dignissim enim. Phasellus sit amet eleifend massa.",
                           RegistrationCount = 5
@@ -60,8 +60,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY19SepGeneralConference",
-                          StartTime = DateTime.Parse("9/2/2019 8:26:00 PM"),
-                          EndTime = DateTime.Parse("9/6/2019 8:26:00 AM"),
+                          StartTime = new DateTime(2019, 9, 2, 8, 26, 00),
+                          EndTime = new DateTime(2019, 9, 6, 8, 26, 00),
                           Title = "FY19 September Internal Conference",
                           Description = "Lorem ipsum dolor sit amet, &lt;strong&gt;consectetur adipiscing&lt;/strong&gt; elit. Donec vulputate, dolor vitae iaculis varius, nibh dolor ultricies massa, aliquam commodo nunc enim molestie mi. Proin molestie ornare sagittis. Fusce ultricies eleifend magna adipiscing egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla scelerisque ut elit vel dapibus. Nunc non ligula posuere, euismod eros euismod, convallis lacus. Nam lacus sem, consequat sed nisl sed, mattis dignissim enim. Phasellus sit amet eleifend massa.",
                           RegistrationCount = 14
@@ -69,8 +69,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY17JulGeneralConference",
-                          StartTime = DateTime.Parse("7/17/2017 5:37:00 PM"),
-                          EndTime = DateTime.Parse("7/21/2017 5:37:00 AM"),
+                          StartTime = new DateTime(2017, 7, 17, 5, 37, 00),
+                          EndTime = new DateTime(2017, 7, 21, 5, 37, 00),
                           Title = "FY17 July Internal Conference",
                           Description = "Lorem ipsum dolor sit amet, &lt;strong&gt;consectetur adipiscing&lt;/strong&gt; elit. Donec vulputate, dolor vitae iaculis varius, nibh dolor ultricies massa, aliquam commodo nunc enim molestie mi. Proin molestie ornare sagittis. Fusce ultricies eleifend magna adipiscing egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla scelerisque ut elit vel dapibus. Nunc non ligula posuere, euismod eros euismod, convallis lacus. Nam lacus sem, consequat sed nisl sed, mattis dignissim enim. Phasellus sit amet eleifend massa.",
                           RegistrationCount = 8
@@ -78,8 +78,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY15FebGeneralConference",
-                          StartTime = DateTime.Parse("2/5/2015 12:29:00 PM"),
-                          EndTime = DateTime.Parse("2/9/2015 12:29:00 AM"),
+                          StartTime = new DateTime(2015, 2, 5, 12, 29, 00),
+                          EndTime = new DateTime(2015, 2, 9, 12, 29, 00),
                           Title = "FY15 February Sales Conference",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 8
@@ -87,8 +87,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY18MayGeneralConference",
-                          StartTime = DateTime.Parse("5/3/2018 11:25:00 AM"),
-                          EndTime = DateTime.Parse("5/6/2018 11:25:00 PM"),
+                          StartTime = new DateTime(2018, 5, 3, 11, 25, 00),
+                          EndTime = new DateTime(2018, 5, 6, 11, 25, 00),
                           Title = "FY18 May Sales Conference",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 6
@@ -96,8 +96,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY18AugGeneralConference",
-                          StartTime = DateTime.Parse("8/18/2018 10:17:00 AM"),
-                          EndTime = DateTime.Parse("8/21/2018 10:17:00 PM"),
+                          StartTime = new DateTime(2018, 8, 18, 10, 17, 00),
+                          EndTime = new DateTime(2018, 8, 21, 10, 17, 00),
                           Title = "FY18 August Technical Conference",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 22
@@ -105,8 +105,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY18OctGeneralConference",
-                          StartTime = DateTime.Parse("10/27/2018 10:47:00 AM"),
-                          EndTime = DateTime.Parse("10/30/2018 10:47:00 PM"),
+                          StartTime = new DateTime(2018, 10, 27, 10, 47, 00),
+                          EndTime = new DateTime(2018, 10, 30, 10, 47, 00),
                           Title = "FY18 October Internal Conference",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 9
@@ -114,8 +114,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY16JunGeneralConference",
-                          StartTime = DateTime.Parse("6/18/2016 11:31:00 AM"),
-                          EndTime = DateTime.Parse("6/21/2016 11:31:00 PM"),
+                          StartTime = new DateTime(2016, 6, 18, 11, 31, 00),
+                          EndTime = new DateTime(2016, 6, 21, 11, 31, 00),
                           Title = "FY16 June General Conferece",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 9
@@ -123,8 +123,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY16MarGeneralConference",
-                          StartTime = DateTime.Parse("3/4/2016 8:48:00 PM"),
-                          EndTime = DateTime.Parse("3/8/2016 8:48:00 AM"),
+                          StartTime = new DateTime(2016, 3, 4, 8, 48, 00),
+                          EndTime = new DateTime(2016, 3, 8, 8, 48, 00),
                           Title = "FY16 March Sales Conference",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 22
@@ -132,8 +132,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY17MayGeneralConference",
-                          StartTime = DateTime.Parse("5/26/2017 10:29:00 AM"),
-                          EndTime = DateTime.Parse("5/29/2017 10:29:00 PM"),
+                          StartTime = new DateTime(2017, 5, 26, 10, 29, 00),
+                          EndTime = new DateTime(2017, 5, 29, 10, 29, 00),
                           Title = "FY17 May Technical Conference",
                           Description = "Lorem ipsum dolor sit amet, &lt;strong&gt;consectetur adipiscing&lt;/strong&gt; elit. Donec vulputate, dolor vitae iaculis varius, nibh dolor ultricies massa, aliquam commodo nunc enim molestie mi. Proin molestie ornare sagittis. Fusce ultricies eleifend magna adipiscing egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla scelerisque ut elit vel dapibus. Nunc non ligula posuere, euismod eros euismod, convallis lacus. Nam lacus sem, consequat sed nisl sed, mattis dignissim enim. Phasellus sit amet eleifend massa.",
                           RegistrationCount = 22
@@ -141,8 +141,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY15OctGeneralConference",
-                          StartTime = DateTime.Parse("10/23/2015 7:04:00 PM"),
-                          EndTime = DateTime.Parse("10/27/2015 7:04:00 AM"),
+                          StartTime = new DateTime(2015, 10, 23, 7, 04, 00),
+                          EndTime = new DateTime(2015, 10, 27, 7, 04, 00),
                           Title = "FY15 October Technical Conference",
                           Description = "Sed in euismod mi, sed pellentesque tortor. Aenean ac massa dolor. Fusce in ligula a nisl lacinia fermentum a ac mi. Vivamus placerat at nunc ut egestas. Suspendisse eu diam interdum, laoreet turpis at, volutpat sem. Maecenas adipiscing fringilla orci, eget venenatis turpis pharetra a. Sed cursus neque arcu, sed malesuada nisl blandit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ac fringilla nisl. Aenean blandit tempus dignissim. Pellentesque vehicula dapibus nibh, in rutrum mi dignissim quis. Nulla condimentum ipsum vitae metus interdum, scelerisque rutrum lorem hendrerit. Phasellus tempor venenatis dolor, ac interdum mi aliquam nec. Fusce vitae felis vel odio elementum facilisis nec sed magna. Aenean scelerisque sed neque quis sodales.",
                           RegistrationCount = 17
@@ -150,8 +150,8 @@ namespace Contoso.Events.DataGeneration
                         new Event
                         {
                           EventKey = "FY18MayGeneralConference2",
-                          StartTime = DateTime.Parse("5/8/2018 6:52:00 PM"),
-                          EndTime = DateTime.Parse("5/12/2018 6:52:00 AM"),
+                          StartTime = new DateTime(2018, 5, 8, 6, 52, 00),
+                          EndTime = new DateTime(2018, 5, 12, 6, 52, 00),
                           Title = "FY18 May General Conferece",
                           Description = "Lorem ipsum dolor sit amet, &lt;strong&gt;consectetur adipiscing&lt;/strong&gt; elit. Donec vulputate, dolor vitae iaculis varius, nibh dolor ultricies massa, aliquam commodo nunc enim molestie mi. Proin molestie ornare sagittis. Fusce ultricies eleifend magna adipiscing egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla scelerisque ut elit vel dapibus. Nunc non ligula posuere, euismod eros euismod, convallis lacus. Nam lacus sem, consequat sed nisl sed, mattis dignissim enim. Phasellus sit amet eleifend massa.",
                           RegistrationCount = 21
