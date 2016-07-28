@@ -1,12 +1,13 @@
-#Building the course
+# Building the course
 
-> It is **strongly** recommended that you use the released files for instructor-led or online deliveries.
+It is **strongly** recommended that you use the released files for instructor-led or online deliveries. These steps exist to help you re-build the files manually.
 
 ## Prerequisites
+
 * Pandoc 1.13.2
   * Windows Installer: [https://github.com/jgm/pandoc/releases](https://github.com/jgm/pandoc/releases/tag/1.13.2)
 * PowerShell Community Extensions 3.2.0
-  * Installer: [http://pscx.codeplex.com/releases](http://pscx.codeplex.com/releases/view/133199)
+  * Installer: [https://www.powershellgallery.com/packages/Pscx/](https://www.powershellgallery.com/packages/Pscx/3.2.2)
 
 > For some scenarios, you may need to reboot your machine or log off after installing the two prerequisites. This manual build has only been tested with the above versions of each dependency.
 
