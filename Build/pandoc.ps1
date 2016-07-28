@@ -33,8 +33,8 @@ function ConvertMarkdownToWord{
     AddVersionFooter $outputFile $versionData
 }
 
-$docsInputDirectory = "..\Instructions\"
-$filesInputDirectory = "..\Allfiles\"
+$docsInputDirectory = "..\Instructions\dotnet\"
+$filesInputDirectory = "..\Allfiles\dotnet\"
 $outputDirectory = "Temp\"
 $docsOutputDirectory = $outputDirectory + "Lab Instructions\"
 $filesOutputDirectory = $outputDirectory + "Allfiles\"
@@ -45,18 +45,18 @@ $version = GetVersionNumber
 New-Item -ItemType Directory -Force -Path $docsOutputDirectory
 
 ' Create Lab Word Documents'
-foreach($file in Get-ChildItem $docsInputDirectory | Where-Object {$_.Extension -eq ".md"})
+foreach($file in Get-ChildItem $docsInputDirectory -Recurse | Where-Object {$_.Extension -eq ".md"})
 {
-    $inputFile = $docsInputDirectory + $file.Name;
+    $inputFile = $file.FullName;
     $outputFile = $docsOutputDirectory + $file.BaseName + '.docx'
     ConvertMarkdownToWord $inputFile $outputFile $version
 }
 
 ' Copy AllFiles '
-Copy-Item $filesInputDirectory –Destination $outputDirectory -Recurse -Container
+Copy-Item $filesInputDirectory –Destination $filesOutputDirectory -Recurse
 
 ' Compress AllFiles & Lab Instructions '
-ZipFiles $filesOutputDirectory $docsOutputDirectory $version
+ ZipFiles $filesOutputDirectory $docsOutputDirectory $version 
 
 ' Remove Temp Directory'
-Remove-Item $outputDirectory -Force -Recurse
+ Remove-Item $outputDirectory -Force -Recurse 
