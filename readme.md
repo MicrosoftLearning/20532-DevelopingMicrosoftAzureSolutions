@@ -1,27 +1,37 @@
-#20532: Developing Microsoft Azure Solutions
+#20532C: Developing Microsoft Azure Solutions
 
 ## What are we doing?
-* To support course [20532B Developing Microsoft Azure Solutions](https://www.microsoft.com/learning/en-us/course.aspx?ID=20532B), we will need to make frequent updates to the course content to keep it current with the Azure services used in the course.  We are publishing the lab instructions and lab files on GitHub to allow for open contributions between the course authors and MCTs to keep the content current with changes in the Azure platform.
-* We hope that this brings a sense of collaboration to the labs like we've never had before - when Azure changes and you find it first during a live delivery, go ahead and make an enhancement right in the lab source.  Help your fellow MCTs.
 
-## Where will the files be?
-* The files are available in a GitHub repo at https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions
+- To support course [20532C: Developing Microsoft Azure Solutions](https://www.microsoft.com/learning/en-us/course.aspx?ID=20532C), we will need to make frequent updates to the course content to keep it current with the Azure services used in the course.  We are publishing the lab instructions and lab files on GitHub to allow for open contributions between the course authors and MCTs to keep the content current with changes in the Azure platform.
+
+- We hope that this brings a sense of collaboration to the labs like we've never had before - when Azure changes and you find it first during a live delivery, go ahead and make an enhancement right in the lab source.  Help your fellow MCTs.
 
 ## How should I use these files relative to the released MOC files?
-* We'll do new builds weekly of portable versions of the MD source so you can always have a build of the latest ready to share with your students.
-* These open files are designed to be used in conjunction with the student handbook, but are in GitHub as a central repository so MCTs and course authors can have a shared source for the latest files.
-* It will be recommended that for every delivery of 20532B, trainers check GitHub for any changes that may have been made to support the latest Azure services, and get the latest files for their delivery.
 
-## How do I contribute?
-* Any MCT can submit a pull request to the code or content in the GitHub repro, Microsoft and the course author will triage and include content and lab code changes as needed.
-* You can submit bugs, changes, improvement and ideas.  Find a new Azure feature before we have?  Submit a new demo!
+- The instructor handbook and PowerPoints are still going to be your primary source for teaching the course content.
+
+- These files on GitHub are designed to be used in conjunction with the student handbook, but are in GitHub as a central repository so MCTs and course authors can have a shared source for the latest lab files.
+
+- It will be recommended that for every delivery of 20532, trainers check GitHub for any changes that may have been made to support the latest Azure services, and get the latest files for their delivery.
 
 ## What about changes to the student handbook?
-* The student handbook will get updated on a regular basis through normal MOC release channels as needed basis.  
+
+- We will review the student handbook on a quarterly basis and update through the normal MOC release channels as needed.
+
+## How do I contribute?
+
+- Any MCT can submit a pull request to the code or content in the GitHub repro, Microsoft and the course author will triage and include content and lab code changes as needed.
+
+- You can submit bugs, changes, improvement and ideas.  Find a new Azure feature before we have?  Submit a new demo!
 
 ## Notes
 
+### Classroom Materials
+
+It is strongly recommended that MCTs and Partners access these materials and in turn, provide them separately to students.  Pointing students directly to GitHub to access Lab steps as part of an ongoing class will require them to access yet another UI as part of the course, contributing to a confusing experience for the student. An explanation to the student regarding why they are receiving separate Lab instructions can highlight the nature of an always-changing cloud-based interface and platform. Microsoft Learning support for accessing files on GitHub and support for navigation of the GitHub site is limited to MCTs teaching this course only.
+
 ### ARM Template
+
 This repo includes an ARM template (located in the [ARM](/ARM) folder) that can be deployed in-lieu of doing the second lab. This is useful for scenarios where you need to catch up a student after they deployment has failed.
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2F20532-DevelopingMicrosoftAzureSolutions%2Fc-release%2FARM%2Flabvm_template.deploy.json" target="_blank">
@@ -30,3 +40,5 @@ This repo includes an ARM template (located in the [ARM](/ARM) folder) that can 
 <a href="http://armviz.io/#/?load=https:%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2F20532-DevelopingMicrosoftAzureSolutions%2Fc-release%2FARM%2Flabvm_template.deploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
+
+> **MCTs:** Refer to the '20532C GitHub User Guide for MCTs.docx' file on the Download Center for detailed instructions for using GitHub. This document is also available on the GitHub repo as [20532C GitHub UserGuide for MCTs](20532CGitHubUserGuideforMCTs.md).  
