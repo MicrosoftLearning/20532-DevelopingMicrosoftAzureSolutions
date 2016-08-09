@@ -33,10 +33,11 @@ function ConvertMarkdownToWord{
     AddVersionFooter $outputFile $versionData
 }
 
-$docsInputDirectory = "..\Instructions\dotnet\"
+$docLabsInputDirectory = "..\Instructions\Labs\dotnet\"
+$docDemosInputDirectory = "..\Instructions\Demos\dotnet\"
 $filesInputDirectory = "..\Allfiles\dotnet\"
 $outputDirectory = "Temp\"
-$docsOutputDirectory = $outputDirectory + "Lab Instructions\"
+$docsOutputDirectory = $outputDirectory + "Instructions\"
 $filesOutputDirectory = $outputDirectory + "Allfiles\"
 
 $version = GetVersionNumber
@@ -45,7 +46,15 @@ $version = GetVersionNumber
 New-Item -ItemType Directory -Force -Path $docsOutputDirectory
 
 ' Create Lab Word Documents'
-foreach($file in Get-ChildItem $docsInputDirectory -Recurse | Where-Object {$_.Extension -eq ".md"})
+foreach($file in Get-ChildItem $docLabsInputDirectory -Recurse | Where-Object {$_.Extension -eq ".md"})
+{
+    $inputFile = $file.FullName;
+    $outputFile = $docsOutputDirectory + $file.BaseName + '.docx'
+    ConvertMarkdownToWord $inputFile $outputFile $version
+}
+
+' Create Demo Word Documents'
+foreach($file in Get-ChildItem $docDemosInputDirectory -Recurse | Where-Object {$_.Extension -eq ".md"})
 {
     $inputFile = $file.FullName;
     $outputFile = $docsOutputDirectory + $file.BaseName + '.docx'
