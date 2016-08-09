@@ -11,8 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "archiver": "^1.0.1",
+    "delete": "^0.3.2",
     "fs-readdir-recursive": "^1.0.0",
     "marked": "^0.3.6",
+    "ncp": "^2.0.0",
     "pandoc-bin": "^0.1.2"
   }
 }
