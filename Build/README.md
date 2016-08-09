@@ -4,7 +4,7 @@ It is **strongly** recommended that you use the released files for instructor-le
 
 ## Prerequisites
 
-* Node ([node.jsorg](http://nodejs.org))
+* Node ([nodejs.org](http://nodejs.org))
   * Tested on version **4.4.5**
 * NPM ([npmjs.com](http://npmjs.com))
   * Tested on version **3.9.5**
