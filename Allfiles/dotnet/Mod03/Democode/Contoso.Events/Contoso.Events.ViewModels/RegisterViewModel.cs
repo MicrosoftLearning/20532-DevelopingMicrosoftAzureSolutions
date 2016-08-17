@@ -6,6 +6,7 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 
 namespace Contoso.Events.ViewModels
@@ -22,7 +23,7 @@ namespace Contoso.Events.ViewModels
                 this.Event = context.Events.SingleOrDefault(e => e.EventKey == eventKey);
             }
 
-            string connectionString = CloudConfigurationManager.GetSetting("Microsoft.WindowsAzure.Storage.ConnectionString");
+            string connectionString = ConfigurationManager.AppSettings["Microsoft.WindowsAzure.Storage.ConnectionString"];
             var storageAccount = Microsoft.WindowsAzure.Storage.CloudStorageAccount.Parse(connectionString);
 
             var tableClient = storageAccount.CreateCloudTableClient();

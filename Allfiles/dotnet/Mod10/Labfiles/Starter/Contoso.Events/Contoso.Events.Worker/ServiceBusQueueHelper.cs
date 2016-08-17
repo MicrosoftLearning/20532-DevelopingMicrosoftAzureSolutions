@@ -1,18 +1,18 @@
 ﻿using Microsoft.ServiceBus;
 using Microsoft.ServiceBus.Messaging;
-using Microsoft.WindowsAzure;
+using Microsoft.Azure;
+using System.Configuration;
 
 namespace Contoso.Events.Worker
 {
-    
     public sealed class ServiceBusQueueHelper : IQueueHelper<BrokeredMessage>
     {
         private readonly QueueClient _client;
 
         public ServiceBusQueueHelper()
         {
-            string serviceBusConnectionString = CloudConfigurationManager.GetSetting("Microsoft.ServiceBus.ConnectionString");
-            string signInQueueName = CloudConfigurationManager.GetSetting("SignInQueueName");
+            string serviceBusConnectionString = ConfigurationManager.AppSettings["Microsoft.ServiceBus.ConnectionString"];
+            string signInQueueName = ConfigurationManager.AppSettings["SignInQueueName"];
             _client = QueueClient.CreateFromConnectionString(serviceBusConnectionString, signInQueueName);
         }
 

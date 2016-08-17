@@ -6,7 +6,6 @@ using System.Web.Routing;
 
 namespace Contoso.Events.Web
 {
-    
     public class MvcApplication : HttpApplication
     {
         protected void Application_Start()

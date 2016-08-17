@@ -1,10 +1,10 @@
-﻿using Microsoft.WindowsAzure;
+﻿using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Queue;
+using System.Configuration;
 
 namespace Contoso.Events.Worker
 {
-    
     public class TableStorageQueueHelper : StorageHelper, IQueueHelper<CloudQueueMessage>
     {
         private readonly CloudQueueClient _queueClient;
@@ -15,7 +15,7 @@ namespace Contoso.Events.Worker
         {
             CloudStorageAccount storageAccount = base.StorageAccount;
             _queueClient = storageAccount.CreateCloudQueueClient();
-            _signInQueueName = CloudConfigurationManager.GetSetting("SignInQueueName");
+            _signInQueueName = ConfigurationManager.AppSettings["SignInQueueName"];
         }
 
         public IQueueMessage<CloudQueueMessage> Receive()

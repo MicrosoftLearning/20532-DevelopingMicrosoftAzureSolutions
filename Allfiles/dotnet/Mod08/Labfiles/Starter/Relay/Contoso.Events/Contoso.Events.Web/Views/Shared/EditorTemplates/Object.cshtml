@@ -1,0 +1,32 @@
+﻿@if (Model == null)
+{
+    <text>@ViewData.ModelMetadata.NullDisplayText</text>
+}
+else if (ViewData.TemplateInfo.TemplateDepth > 1)
+{
+    <text>@ViewData.ModelMetadata.SimpleDisplayText</text>
+}
+else
+{
+    <fieldset>
+        @foreach (var prop in ViewData.ModelMetadata.Properties.Where(pm => pm.ShowForDisplay && !ViewData.TemplateInfo.Visited(pm)))
+            {
+                if (prop.HideSurroundingHtml)
+                {
+                    <text>@Html.Display(prop.PropertyName)</text>
+                }
+                else
+                {
+                    var inputName = "input" + prop.PropertyName;
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="@inputName">
+                            @prop.GetDisplayName()
+                        </label>
+                        <div class="col-md-8">
+                            @Html.Editor(prop.PropertyName)
+                        </div>
+                    </div>
+                }
+            }
+    </fieldset>
+}

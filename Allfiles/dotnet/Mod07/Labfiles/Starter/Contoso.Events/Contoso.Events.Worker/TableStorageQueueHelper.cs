@@ -1,5 +1,6 @@
-﻿using Microsoft.WindowsAzure;
+﻿using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage.Queue;
+using System.Configuration;
 
 namespace Contoso.Events.Worker
 {
@@ -34,7 +35,7 @@ namespace Contoso.Events.Worker
 
         private CloudQueue GetCloudQueue()
         {
-            string signInQueueName = CloudConfigurationManager.GetSetting("SignInQueueName");
+            string signInQueueName = ConfigurationManager.AppSettings["SignInQueueName"];
             CloudQueue queue = _queueClient.GetQueueReference(signInQueueName);
             queue.CreateIfNotExists();
             return queue;

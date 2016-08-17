@@ -1,0 +1,34 @@
+﻿@model SignInSheetViewModel
+@{
+    ViewBag.Title = "Document Generation";
+}
+<h2>Sign-In Sheet Generation</h2>
+<h4>@Model.Event.Title</h4>
+<div class="row">
+    <div class="col-lg-12">
+        @if (@Model.SignInSheetState == SignInSheetState.SignInDocumentProcessing)
+        {
+            <div class="alert alert-info">
+                <h4>Sign-In Document Generation In Progress</h4>
+                <p>Please @Html.ActionLink("refresh", "SignIn", new { id = Model.Event.EventKey }) the page to check status</p>
+            </div>
+        }
+        else if (@Model.SignInSheetState == SignInSheetState.SignInDocumentAlreadyExists)
+        {
+            Uri blobUri = new Uri(@Model.Event.SignInDocumentUrl, UriKind.Absolute);
+            string blobFileName = blobUri.Segments.Last();
+            string blobName = Path.GetFileNameWithoutExtension(blobFileName);
+
+            <div class="alert alert-warning">
+                <h4>Sign-In Document Already Exists</h4>
+                <p>
+                    @Html.ActionLink("Sign-In Sheet", "DownloadSignIn", new { id = blobName }, new { target = "_blank" })
+                </p>
+                <p>
+
+                    @Html.ActionLink("Sign-In Sheet Hyperlink", "GetSignInUrl", new { id = blobName })
+                </p>
+            </div>
+        }
+    </div>
+</div>

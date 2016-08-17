@@ -1,0 +1,64 @@
+﻿@model EventsGridViewModel
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover ">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Registrants</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Event item in Model.Events)
+                    {
+                        <tr>
+                            <td>
+                                @item.Title
+                            </td>
+                            <td>
+                                @item.StartTime.ToShortDateString()
+                            </td>
+                            <td>
+                                @item.RegistrationCount
+                            </td>
+                            <td>
+                                <a class="btn btn-primary btn-sm" href="@Url.Action("Event", new { id = item.EventKey })">
+                                    Go to Event 
+                                    <span class="glyphicon glyphicon-log-in"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        @using (Html.BeginForm())
+        {
+            int numberOfPages = (int)Math.Ceiling(Model.TotalRows / (double)Model.PageSize);
+            <div style="text-align: center;">
+                <ul class="pagination" style="display: inline-block">
+                    <li class="@(Model.CurrentPage <= 1 ? "disabled" : String.Empty)">
+                        <a href="@Url.Action("Events", new { id = Model.CurrentPage - 1})">
+                            <span class="glyphicon glyphicon-backward"></span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            Page @Model.CurrentPage / @numberOfPages
+                        </a>
+                    </li>
+                    <li class="@(Model.CurrentPage >= numberOfPages ? "disabled" : String.Empty)">
+                        <a href="@Url.Action("Events", new { id = Model.CurrentPage + 1})">
+                            <span class="glyphicon glyphicon-forward"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+</div>

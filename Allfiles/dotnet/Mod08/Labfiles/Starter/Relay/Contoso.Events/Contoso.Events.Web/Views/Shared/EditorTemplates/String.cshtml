@@ -1,0 +1,17 @@
+﻿@{
+    IDictionary<string, object> attributes = new Dictionary<string, object>();
+    if (!string.IsNullOrEmpty(ViewData.ModelMetadata.Watermark))
+    {
+        attributes.Add("placeholder", ViewData.ModelMetadata.Watermark);
+    }
+
+    IEnumerable<ModelValidator> validators = ModelValidatorProviders.Providers.GetValidators(ViewData.ModelMetadata, ViewContext);
+    ModelClientValidationRule stringLengthRule = validators.SelectMany(v => v.GetClientValidationRules()).FirstOrDefault(m => m.ValidationType == "length");
+    if (stringLengthRule != null && stringLengthRule.ValidationParameters.ContainsKey("max"))
+    {
+        attributes.Add("maxlength", stringLengthRule.ValidationParameters["max"]);
+    }
+
+    attributes.Add("class", "form-control");
+}
+@Html.TextBox("", ViewData.TemplateInfo.FormattedModelValue, attributes)

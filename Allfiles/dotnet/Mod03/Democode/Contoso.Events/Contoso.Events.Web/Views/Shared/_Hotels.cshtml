@@ -1,0 +1,32 @@
+﻿@model HotelsViewModel
+<div class="list-group">
+    <a class="list-group-item active" href="#">
+        <h3>Nearby Hotels</h3>
+    </a>
+    @if (Model.Hotels == null)
+    {
+        <a class="list-group-item" href="#">
+            <p>
+                <em>
+                    An error occured with the Hotels WCF service.
+                </em>
+            </p>
+        </a>
+    }
+    else
+    {
+        foreach (var hotel in Model.Hotels)
+        {
+            <a class="list-group-item" href="@hotel.Website">
+                <h4 class="list-group-item-heading">@hotel.Name</h4>
+                <p class="list-group-item-text">
+                    @hotel.Address
+                    <br />
+                    <small>
+                        @hotel.PhoneNumber
+                    </small>
+                </p>
+            </a>
+        }
+    }
+</div>

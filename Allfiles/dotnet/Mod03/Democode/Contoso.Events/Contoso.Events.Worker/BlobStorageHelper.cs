@@ -13,8 +13,6 @@ namespace Contoso.Events.Worker
         {
             _blobClient = base.StorageAccount.CreateCloudBlobClient();
         }
-
-        
         public Uri CreateBlob(MemoryStream stream, string eventKey)
         {
             CloudBlobContainer container = _blobClient.GetContainerReference("signin");

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.Spatial;
 
 namespace Contoso.Events.Models
 {
@@ -34,7 +33,9 @@ namespace Contoso.Events.Models
         [Range(0, Int16.MaxValue)]
         public short RegistrationCount { get; set; }
 
-        public DbGeography Location { get; set; }
+        public double? Latitude { get; set; }
+
+        public double? Longitude { get; set; }
 
         [DataType(DataType.Url)]
         public string SignInDocumentUrl { get; set; }

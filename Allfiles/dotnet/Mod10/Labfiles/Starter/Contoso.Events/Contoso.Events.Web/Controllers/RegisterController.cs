@@ -6,6 +6,7 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Configuration;
 using System.Net;
 using System.Net.Http;
 using System.Web;
@@ -39,7 +40,7 @@ namespace Contoso.Events.Web.Controllers
 
         private Guid StoreRegistration(dynamic registration)
         {
-            var storageAccount = Microsoft.WindowsAzure.Storage.CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("Microsoft.WindowsAzure.Storage.ConnectionString"));
+            var storageAccount = Microsoft.WindowsAzure.Storage.CloudStorageAccount.Parse(ConfigurationManager.AppSettings["Microsoft.WindowsAzure.Storage.ConnectionString"]);
 
             var tableClient = storageAccount.CreateCloudTableClient();
             var table = tableClient.GetTableReference("EventRegistrations");

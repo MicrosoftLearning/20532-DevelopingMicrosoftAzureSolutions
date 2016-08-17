@@ -1,6 +1,6 @@
 ﻿using Contoso.Events.Data;
 using Contoso.Events.Models;
-using Microsoft.ServiceBus.Notifications;
+using Microsoft.Azure.NotificationHubs;
 using System;
 using System.IO;
 using System.Linq;
@@ -19,8 +19,6 @@ namespace Contoso.Events.ViewModels
                 this.Event = context.Events.SingleOrDefault(e => e.EventKey == eventKey);
             }
         }
-
-        
         public async Task SendNotification()
         {
             NotificationHubClient hub = NotificationHubClient.CreateClientFromConnectionString("Endpoint=sb://contosoevents.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=j1toC1FXT/kECuAEzaBuKLOzYT9KXsWKmbXPiKWmddo=", "events");

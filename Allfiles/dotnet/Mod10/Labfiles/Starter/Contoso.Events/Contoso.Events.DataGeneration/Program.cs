@@ -4,6 +4,7 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Data.Entity.Spatial;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Contoso.Events.Data.Generation
     {
         static void Main(string[] args)
         {
-            var storageAccount = CloudStorageAccount.DevelopmentStorageAccount;
+            var storageAccount = CloudStorageAccount.Parse(ConfigurationManager.AppSettings["StorageConnectionString"]);
 
             var tableClient = storageAccount.CreateCloudTableClient();
             var table = tableClient.GetTableReference("EventRegistrations");
@@ -87,7 +88,8 @@ namespace Contoso.Events.Data.Generation
                 Title = name,
                 Description = description,
                 RegistrationCount = registrationCount,
-                Location = location
+                Latitude = latLong.Key,
+                Longitude = latLong.Value
             });
 
             context.SaveChanges();

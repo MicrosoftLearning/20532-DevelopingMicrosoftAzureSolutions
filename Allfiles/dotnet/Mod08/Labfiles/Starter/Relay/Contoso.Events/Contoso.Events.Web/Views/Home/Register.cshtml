@@ -1,0 +1,26 @@
+﻿@model RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+<h3>@Model.Event.Title</h3>
+<hr />
+<p>
+    @ViewBag.Message
+</p>
+<div class="well well-sm">
+    @using (Html.BeginRouteForm("DefaultApi", new { controller = "Register", httproute = "true" }, FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+        
+        @Html.HiddenFor(m => m.Event.Id)
+        @Html.HiddenFor(m => m.Event.EventKey)
+
+        @Html.EditorFor(m => m.RegistrationStub)
+
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,53 @@
+﻿@model UpcomingEventsViewModel
+@{
+    ViewBag.Title = "Home";
+}
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.eventsList .more').moreLink({
+                showChar: 250,
+                ellipsestext: "...",
+                moretext: "Show More",
+                lesstext: "Show Less"
+            });
+
+        });
+    </script>
+}
+<div class="jumbotron">
+    <h1>Upcoming Events</h1>
+    <div class="well well-sm">
+        <div class="list-group eventsList">
+            @foreach (Event item in Model.Events)
+            {
+                <a class="list-group-item active" href="@Url.Action("Event", new { id = item.EventKey })">
+                    <h3 class="list-group-item-heading">
+                        @item.Title
+                        @if (item.RegistrationCount > 0)
+                        {
+                            <span class="label label-info pull-right">
+                                @item.RegistrationCount Registered
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="label label-danger pull-right">
+                                No Registrants
+                            </span>
+                        }
+                    </h3>
+                    <small>
+                        @item.StartTime.ToString("dd/MM/yy HH:mm tt")
+                        &nbsp;-&nbsp;
+                        @item.EndTime.ToString("dd/MM/yy HH:mm tt")
+                    </small>
+                    <p class="list-group-item-text more">
+                        @Html.Raw(HttpUtility.HtmlDecode(item.Description))
+                    </p>
+                </a>
+            }
+        </div>
+    </div>
+</div>
