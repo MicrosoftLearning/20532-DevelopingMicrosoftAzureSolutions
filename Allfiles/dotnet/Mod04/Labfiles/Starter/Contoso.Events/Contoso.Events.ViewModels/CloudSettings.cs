@@ -1,13 +1,10 @@
-﻿using Microsoft.Azure;
-using Microsoft.WindowsAzure.ServiceRuntime;
-using System;
+﻿using System;
+using System.Configuration;
 
 namespace Contoso.Events.ViewModels
 {
-    
     public static class CloudSettings
     {
-        private const int DEFAULT_LATEST_EVENTS_COUNT = 2;
         private static int? _latestEventsCount = null;
 
         public static int LatestEventsCount
@@ -16,30 +13,14 @@ namespace Contoso.Events.ViewModels
             {
                 if (!_latestEventsCount.HasValue)
                 {
-                    string latestEventsCountString = GetConfigurationSetting("LatestEventsCount");
-                    int latestEventsCount;
-                    if (Int32.TryParse(latestEventsCountString, out latestEventsCount))
-                    {
-                        _latestEventsCount = latestEventsCount;
-                    }
-                    else
-                    {
-                        _latestEventsCount = DEFAULT_LATEST_EVENTS_COUNT;
-                    }
+                    string latestEventsCountString = ConfigurationManager.AppSettings["LatestEventsCount"];
+                    int latestEventsCount = 0;
+                    Int32.TryParse(latestEventsCountString, out latestEventsCount);
+                    _latestEventsCount = latestEventsCount;
                 }
 
                 return _latestEventsCount.Value;
             }
-        }
-
-        private static string GetConfigurationSetting(string settingName)
-        {
-            string settingValue = default(string);
-            if (RoleEnvironment.IsAvailable)
-            {
-                settingValue = CloudConfigurationManager.GetSetting(settingName);
-            }
-            return settingValue;
         }
     }
 }
