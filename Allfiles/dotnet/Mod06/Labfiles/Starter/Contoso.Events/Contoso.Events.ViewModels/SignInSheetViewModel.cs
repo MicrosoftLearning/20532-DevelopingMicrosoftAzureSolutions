@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System;
 using System.Linq;
 using System.Web.Configuration;
+using System.Configuration;
 
 namespace Contoso.Events.ViewModels
 {
@@ -71,11 +72,11 @@ namespace Contoso.Events.ViewModels
 
         private void GenerateSignInSheetTableStorage(EventsContext context, Event eventItem)
         {
-            string connectionString = CloudConfigurationManager.GetSetting("Microsoft.WindowsAzure.Storage.ConnectionString");
+            string connectionString = ConfigurationManager.AppSettings["Microsoft.WindowsAzure.Storage.ConnectionString"];
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(connectionString);
             CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
 
-            string signInQueueName = WebConfigurationManager.AppSettings["SignInQueueName"];
+            string signInQueueName = ConfigurationManager.AppSettings["SignInQueueName"];
             CloudQueue queue = queueClient.GetQueueReference(signInQueueName);
             queue.CreateIfNotExists();
 
