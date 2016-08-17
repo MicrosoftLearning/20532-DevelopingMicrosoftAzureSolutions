@@ -18,13 +18,13 @@ namespace Contoso.Events.ViewModels
             _blobId = blobId;
         }
 
-        /// TODO: Exercise 09.3: Retrieving Files and Media from the Container 
+        
         public async Task<DownloadPayload> GetStream()
         {
             return await Task.FromResult<DownloadPayload>(null);
         }
 
-        /// TODO: Exercise 09.4: Specifying Permissions for the Container 
+        
         public async Task<string> GetSecureUrl()
         {
             return await Task.FromResult<string>(String.Empty);

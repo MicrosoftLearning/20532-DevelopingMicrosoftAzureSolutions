@@ -18,7 +18,7 @@ namespace Contoso.Events.ViewModels
             _blobId = blobId;
         }
 
-        /// TODO: Exercise 09.3: Retrieving Files and Media from the Container 
+        
         public async Task<DownloadPayload> GetStream()
         {
             CloudBlobClient blobClient = _storageAccount.CreateCloudBlobClient();
@@ -31,7 +31,7 @@ namespace Contoso.Events.ViewModels
             return new DownloadPayload { Stream = blobStream, ContentType = blob.Properties.ContentType };
         }
 
-        /// TODO: Exercise 09.4: Specifying Permissions for the Container 
+        
         public async Task<string> GetSecureUrl()
         {
             CloudBlobClient blobClient = _storageAccount.CreateCloudBlobClient();

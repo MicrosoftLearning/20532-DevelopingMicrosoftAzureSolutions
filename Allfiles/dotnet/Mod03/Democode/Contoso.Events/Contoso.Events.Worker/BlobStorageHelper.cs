@@ -14,7 +14,7 @@ namespace Contoso.Events.Worker
             _blobClient = base.StorageAccount.CreateCloudBlobClient();
         }
 
-        /// TODO: Exercise 09.2: Populating the Container with Files and Media
+        
         public Uri CreateBlob(MemoryStream stream, string eventKey)
         {
             CloudBlobContainer container = _blobClient.GetContainerReference("signin");

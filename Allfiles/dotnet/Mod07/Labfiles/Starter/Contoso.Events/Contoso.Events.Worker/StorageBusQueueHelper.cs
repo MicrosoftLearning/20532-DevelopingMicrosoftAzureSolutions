@@ -4,7 +4,7 @@ using Microsoft.WindowsAzure;
 
 namespace Contoso.Events.Worker
 {
-    /// TODO: Exercise 10.5: Retrieving Message from a Service Bus Queue 
+    
     public sealed class StorageBusQueueHelper : IQueueHelper<BrokeredMessage>
     {
         private readonly QueueClient _client;

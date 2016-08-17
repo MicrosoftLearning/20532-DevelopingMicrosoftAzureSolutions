@@ -14,7 +14,7 @@ namespace Contoso.Events.ViewModels
             LoadData();
         }
 
-        /// TODO: Exercise 10.3: Connecting a WCF Service to a Service Bus Namespace 
+        
         private void LoadData()
         {
             List<Hotel> eventsList = new List<Hotel>();

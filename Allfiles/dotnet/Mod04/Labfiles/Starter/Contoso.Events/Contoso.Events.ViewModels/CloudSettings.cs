@@ -4,7 +4,7 @@ using System;
 
 namespace Contoso.Events.ViewModels
 {
-    /// TODO: Exercise 03.3: Configure a Windows Azure Website 
+    
     public static class CloudSettings
     {
         private const int DEFAULT_LATEST_EVENTS_COUNT = 2;

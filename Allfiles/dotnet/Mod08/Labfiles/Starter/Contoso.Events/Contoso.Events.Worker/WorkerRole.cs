@@ -15,7 +15,7 @@ using System.Threading;
 
 namespace Contoso.Events.Worker
 {
-    /// TODO: Exercise 10.3: Create a Service Bus Queue 
+    
     public class WorkerRole : RoleEntryPoint
     {
         private readonly SignInDocumentGenerator _documentGenerator = new SignInDocumentGenerator();

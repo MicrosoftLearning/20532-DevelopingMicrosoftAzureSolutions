@@ -15,8 +15,8 @@ using System.Threading;
 
 namespace Contoso.Events.Worker
 {
-    /// TODO: Exercise 10.2: Create an Azure Queue Storage instance 
-    /// TODO: Exercise 10.4: Create a Service Bus Queue 
+    
+    
     public class WorkerRole : RoleEntryPoint
     {
         private readonly SignInDocumentGenerator _documentGenerator = new SignInDocumentGenerator();

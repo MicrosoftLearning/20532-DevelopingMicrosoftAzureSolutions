@@ -16,8 +16,8 @@ namespace Contoso.Events.ViewModels
             _blobId = blobId;
         }
 
-        /// TODO: Exercise 09.3: Retrieving Files and Media from the Container 
-        /// TODO: Exercise 09.4: Specifying Permissions for the Container 
+        
+        
         public async Task<DownloadPayload> GetStream()
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(ConfigurationManager.AppSettings["Microsoft.WindowsAzure.Storage.ConnectionString"]);

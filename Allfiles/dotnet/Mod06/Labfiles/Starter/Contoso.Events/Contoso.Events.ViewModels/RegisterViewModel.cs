@@ -16,7 +16,7 @@ namespace Contoso.Events.ViewModels
         public RegisterViewModel()
         { }
 
-        /// TODO: Exercise 08.3: Updating the Web ViewModel to use Table Storage 
+        
         public RegisterViewModel(string eventKey)
         {
             using (EventsContext context = new EventsContext())

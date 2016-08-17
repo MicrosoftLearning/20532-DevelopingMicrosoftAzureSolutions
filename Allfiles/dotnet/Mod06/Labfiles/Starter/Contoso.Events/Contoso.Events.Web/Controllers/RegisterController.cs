@@ -38,7 +38,7 @@ namespace Contoso.Events.Web.Controllers
             }
         }
 
-        /// TODO: Exercise 08.3: Updating the Web Controller to use Table Storage
+        
         private Guid StoreRegistration(dynamic registration)
         {
             return Guid.Empty;

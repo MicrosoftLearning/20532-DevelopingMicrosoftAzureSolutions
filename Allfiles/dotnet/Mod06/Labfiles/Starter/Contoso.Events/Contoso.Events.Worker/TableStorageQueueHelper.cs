@@ -4,7 +4,7 @@ using System.Configuration;
 
 namespace Contoso.Events.Worker
 {
-    /// TODO: Exercise 10.3: Retrieving Messages from Azure Queue Storage 
+    
     public class TableStorageQueueHelper : StorageHelper, IQueueHelper<CloudQueueMessage>
     {
         private readonly CloudQueueClient _queueClient;

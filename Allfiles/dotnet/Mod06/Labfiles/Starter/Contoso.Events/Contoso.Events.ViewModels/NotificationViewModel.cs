@@ -20,7 +20,7 @@ namespace Contoso.Events.ViewModels
             }
         }
 
-        /// TODO: Exercise 12.3: Pushing a message to a Service Bus Notification Hub 
+        
         public async Task SendNotification()
         {
             NotificationHubClient hub = NotificationHubClient.CreateClientFromConnectionString("Endpoint=sb://contosoevents.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=j1toC1FXT/kECuAEzaBuKLOzYT9KXsWKmbXPiKWmddo=", "events");

@@ -3,7 +3,7 @@ using System;
 
 namespace Contoso.Events.Lodging
 {
-    /// TODO: Exercise 10.2: Validate the WCF Service 
+    
     public class LodgingService : ILodgingService
     {
         public Hotel[] GetHotels()

@@ -16,7 +16,7 @@ namespace Contoso.Events.Worker
             _tableClient = base.StorageAccount.CreateCloudTableClient();
         }
 
-        /// TODO: Exercise 08.2: Populating the Sign-In Form with Registrant Names
+        
         public IEnumerable<string> GetRegistrantNames(string eventKey)
         {
             return Enumerable.Empty<string>();
