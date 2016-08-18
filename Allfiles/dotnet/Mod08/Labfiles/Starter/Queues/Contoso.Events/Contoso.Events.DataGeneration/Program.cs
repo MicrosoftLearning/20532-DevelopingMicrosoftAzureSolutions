@@ -64,7 +64,6 @@ namespace Contoso.Events.Data.Generation
         public static List<Registration> CreateEvent(EventsContext context)
         {
             var latLong = latLongs[rand.Next(0, latLongs.Count)];
-            var location = DbGeography.PointFromText(String.Format("POINT({0} {1})", latLong.Value, latLong.Key), 4326);
             var startTime = new DateTime(rand.Next(DateTime.Today.Year + 1, DateTime.Today.Year + 7), rand.Next(1, 13), rand.Next(1, 29), rand.Next(9, 22), rand.Next(0, 60), 0);
             var eventType = types[rand.Next(0, types.Count)];
             var name = String.Format("FY{0:yy} {0:MMMM} {1}", startTime, eventType.Key);
