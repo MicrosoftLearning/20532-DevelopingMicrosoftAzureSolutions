@@ -38,7 +38,7 @@
 
 1.  Verify that your account name and email address displayed at the top-right corner of the new portal are correct.
 
-1.  In the navigation pane on the left side, click **Browse**.
+1.  In the navigation pane on the left side, click **More Services**.
 
 1.  Click **Websites**.
 

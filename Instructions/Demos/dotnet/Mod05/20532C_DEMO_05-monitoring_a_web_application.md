@@ -114,7 +114,7 @@
 
 1. If prompted with the **Welcome to Microsoft Azure** dialog, click **Get Started**.
 
-1. In the navigation pane on the left side of the screen, scroll down, and then click **Browse**.
+1. In the navigation pane on the left side of the screen, scroll down, and then click **More Services**.
 
 1. In the **Browse** blade that displays, click **Websites**.
 

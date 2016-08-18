@@ -16,7 +16,7 @@
 
 1.  In the dialog box that displays, click **Get Started**.
 
-1.  In the navigation pane on the left side, scroll down, and then click **Browse**.
+1.  In the navigation pane on the left side, scroll down, and then click **More Services**.
 
 1.  In the **Browse** blade that displays, click **Virtual machines**.
 
