@@ -2,9 +2,9 @@
 
 # Demo: Implementing Azure Storage Tables
 
-1.  On the Start screen, click the down arrow to see all applications.
+1. On the Start screen, locate and click the **Visual Studio 2015** tile.
 
-1.  Click the **Visual Studio 2015** tile.
+  > **Note:** You might have to use the down arrow to locate the Visual Studio 2015 tile on your Start screen.
 
 1.  On the **File** menu, point to **New,** and then click **Project**.
 
