@@ -20,7 +20,6 @@ namespace Contoso.Events.Data.Generation
             var tableClient = storageAccount.CreateCloudTableClient();
             var table = tableClient.GetTableReference("EventRegistrations");
 
-            table.DeleteIfExists();
             table.CreateIfNotExists();
 
             List<Registration> registrationList = new List<Registration>();
