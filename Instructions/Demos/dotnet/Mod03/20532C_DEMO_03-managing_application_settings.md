@@ -30,7 +30,7 @@
 
 	a.  Click the **Settings** tile.
 
-	b.  In the **Settings** blade, click **Application Settings**.
+	b.  In the **Settings** section, click the **Application Settings** option.
 
 	c.  Locate the **Connection strings** section, and then add a connection string using the **Name** *entrycount* and the **Value** *8*.
 

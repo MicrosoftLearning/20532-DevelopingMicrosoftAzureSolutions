@@ -38,7 +38,7 @@
 
 	a.  Click the **Settings** tile.
 
-	b.  In the **Settings** blade, click **Scale**.
+	b.  In the **Settings** section, select the **Scale** option.
 
 	c.  In the **Scale** blade, select the **Performance** option for the autoscale mode.
 
