@@ -2,9 +2,9 @@
 
 # Demo: Managing a Web App Using PowerShell
 
-1.  On the Windows Start screen, click the down arrow to view all the applications, and then click **Microsoft Azure PowerShell**.
+1.  On the Windows Start screen, click the down arrow to view all the applications, and then click **Windows PowerShell**.
 
-1.  Switch to the **Microsoft Azure PowerShell** console window.
+1.  Switch to the **Windows PowerShell** console window.
 
 1.  To sign in to Azure, type the following command in the console, and then press Enter:
 

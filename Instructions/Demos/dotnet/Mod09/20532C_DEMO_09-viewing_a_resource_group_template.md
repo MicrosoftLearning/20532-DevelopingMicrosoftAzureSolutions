@@ -2,9 +2,9 @@
 
 # Demo: Viewing a Resource Group Template
 
-1.  On the Start screen, click the down arrow to view all the applications, and then click **Microsoft Azure PowerShell**.
+1.  On the Start screen, click the down arrow to view all the applications, and then click **Windows PowerShell**.
 
-1.  Switch to the **Microsoft Azure PowerShell** console window.
+1.  Switch to the **Windows PowerShell** console window.
 
 1.  To switch to the **Azure Resource Manager** modules, type the following command in the console, and then press Enter:
 
