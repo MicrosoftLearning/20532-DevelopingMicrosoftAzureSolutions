@@ -50,7 +50,7 @@
 
 1.  On the taskbar, click the **File Explorer** icon.
 
-1.  In the Libraries window, go to **Allfiles (F):\\Mod11\\Demofiles**, and then view the content of the JSON file: **MSOpenTech.OracleDatabase12candWebLogicServer12cSE.0.2.9-preview.json**.
+1.  In the Libraries window, go to **Allfiles (F):\\Mod09\\Demofiles**, and then view the content of the JSON file: **MSOpenTech.OracleDatabase12candWebLogicServer12cSE.0.2.9-preview.json**.
 
 	> You can use either Visual Studio 2013 or Notepad to view the content of the JSON file.
 

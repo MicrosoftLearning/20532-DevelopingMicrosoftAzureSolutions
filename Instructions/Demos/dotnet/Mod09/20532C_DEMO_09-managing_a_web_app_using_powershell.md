@@ -48,7 +48,7 @@
 
 1.  In the **Save As** dialog box that displays, perform the following steps:
 
-	a.  Go to the **AllFiles (F):\\Mod11\\Demofiles** folder.
+	a.  Go to the **AllFiles (F):\\Mod09\\Demofiles** folder.
 
 	b.  In the **File Name** box, type **20532**.
 
@@ -63,7 +63,7 @@
 1.  To import your publish settings file, type the following command in the console, and then press Enter:
 
 	```
-	Import-AzurePublishSettingsFile F:\Mod11\Demofiles\20532.publishsettings
+	Import-AzurePublishSettingsFile F:\Mod09\Demofiles\20532.publishsettings
 	```
 
 1.  To view any available account details (there might be none), type the following command in the console, and then press Enter:
