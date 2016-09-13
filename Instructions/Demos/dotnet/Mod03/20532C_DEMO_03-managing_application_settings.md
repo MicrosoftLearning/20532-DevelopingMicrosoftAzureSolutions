@@ -14,21 +14,27 @@
 
 1.  Click **Sign In**.
 
-1.  At the bottom-left corner of the screen, click **New**.
+1.  At the top-left corner of the screen, click **New**.
 
-1.  In the **New** blade that displays, click **Web App**.
+1.  In the **New** blade that displays, click **Web + Mobile**.
+
+1.	In the **Web + Mobile** blade that displays, click **Web App**.
 
 1.  In the **Web App** blade that displays, do the following:
 
-	a.  In the **URL** dialog box, provide a unique name for your Web App.
+	a.  In the **App name** dialog box, provide a unique name for your Web App.
 
-	b.  Click **Create**.
+	b. 	In the **Resource Group** section, locate the **Create new** radio button and select it.
+
+	c. 	In the **Resource Group** section, locate the dialog box and enter **20532WebApp** as the name of the *Resource Group*.
+
+	d.  Click **Create**.
 
 1.  After the Web App is created, the new Web App blade will automatically open.
 
 1.  In the new blade that displays for your Web App, perform the following steps:
 
-	a.  Click the **Settings** tile.
+	a.  Click the **Settings** button at the top of the blade.
 
 	b.  In the **Settings** section, click the **Application Settings** option.
 
