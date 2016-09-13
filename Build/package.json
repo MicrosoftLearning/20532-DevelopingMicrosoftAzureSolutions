@@ -1,21 +1,19 @@
 {
-  "name": "MarkdownToDocx",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "archiver": "^1.0.1",
-    "delete": "^0.3.2",
-    "fs-readdir-recursive": "^1.0.0",
-    "marked": "^0.3.6",
-    "ncp": "^2.0.0",
-    "pandoc-bin": "^0.1.2"
-  }
+    "name": "mocbuild",
+    "version": "1.0.0",
+    "main": "script.js",
+    "scripts": {
+        "build": "node script.js"
+    },
+    "private": true,
+    "license": "MIT",
+    "repository": "MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions",
+    "dependencies": {
+        "archiver": "^1.0.1",
+        "delete": "^0.3.2",
+        "fs-readdir-recursive": "^1.0.0",
+        "marked": "^0.3.6",
+        "ncp": "^2.0.0",
+        "pandoc-bin": "^0.1.2"
+    }
 }

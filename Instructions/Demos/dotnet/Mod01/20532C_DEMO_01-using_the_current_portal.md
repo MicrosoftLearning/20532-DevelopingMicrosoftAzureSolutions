@@ -16,15 +16,15 @@
 
 1.  If you are prompted with a dialog box that introduces you to the new portal, click **Get Started**.
 
-1.  After the dashboard is fully loaded, right-click the **Dashboard** (home screen), and then click **Customize**.
+1.  After the dashboard is fully loaded, right-click the **Dashboard** (home screen), and then click **Edit dashboard**.
 
 	> You can use the settings of each tile to resize the tile and customize the Dashboard.
 
 1.  Right-click the **Dashboard** (home screen), and then click **Done Customizing**.
 
-1.  In the bottom-left corner of the screen, click **New**.
+1.  In the top-left corner of the screen, click **New**.
 
-1.  In the **New** panel that displays, click **Everything**.
+1.  In the **New** panel that displays, click **See all**.
 
 1.  In the **Marketplace** blade that displays, click **Virtual machines**.
 

@@ -28,23 +28,25 @@
 
 1. In the **Create VM** blade that displays, perform the following steps:
 
-	a.  In the **Host Name** box, provide a value with the prefix **vm20532demo** followed by your name.
+	a.  In the **Name** box, provide a value with the prefix **vm20532demo** followed by your name.
+	
+	b. In the **VM disk type** list, select the value **HDD**.
 
-	b.  In the **User Name** box, provide the value **Instructor**.
+	c.  In the **User Name** box, provide the value **Instructor**.
 
-	c.  In the **Password** box, provide the value **AzurePa\$\$w0rd**.
+	d.  In the **Password** box, provide the value **AzurePa\$\$w0rd**.
 
-	d.  Click **Pricing Tier**.
+	e.  Click **Pricing Tier**.
 
-	e.  In the **Recommend Pricing Tiers** blade, click **Browse All Pricing Tiers**.
+	f.  In the **Recommend Pricing Tiers** blade, click **Browse All Pricing Tiers**.
 
-	f.  Select **A2 Standard**.
+	g.  Select **A2 Standard**.
 
-	g.  Click **Select**.
+	h.  Click **Select**.
 
-	h.  In the Recommended Pricing Tiers blade, click **Select**.
+	i.  In the Recommended Pricing Tiers blade, click **Select**.
 
-	i.  To create the virtual machine by using your specified configuration, click **Create**.
+	j.  To create the virtual machine by using your specified configuration, click **Create**.
 
 1.  Select the newly created virtual machine from your Startboard.
 

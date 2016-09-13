@@ -66,9 +66,9 @@
 
 	> The **Summary** area contains icons for each resource in your Resource Group. The single Web App resource is the icon you should select.
 
-1.  In the new blade that displays, click the **Settings** tile.
+1.  In the new blade that displays, locate the **Settings** section.
 
-1.  In the **Settings** blade that appears, click the **Properties** button.
+1.  In the **Settings** section that appears, click the **Properties** option.
 
 1.  In the **Properties** blade that displays, click the hyperlink under the **URL** header.
 

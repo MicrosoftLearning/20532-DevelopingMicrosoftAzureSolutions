@@ -13,10 +13,11 @@ It is **strongly** recommended that you use the released files for instructor-le
 A Node build script is included that will build the course and output two zip files, one for the **AllFiles** and one for the **Lab Instructions**.  The script will initially prompt you for a version number and that version number is used in the name of the resulting zip files.  Both prerequisites must be installed prior to running the script.
 
 To run the script, use the following commands at the **Build** directory of this repository:
+
   ```shell
   npm install
   ```
 
   ```shell
-  node server
+  npm run build
   ```
