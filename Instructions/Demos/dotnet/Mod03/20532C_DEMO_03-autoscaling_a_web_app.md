@@ -14,38 +14,50 @@
 
 1.  Click **Sign In**.
 
-1.  At the lower-left corner of the screen, click **New**.
+1.  At the top-left corner of the screen, click **New**.
 
-1.  In the **New** blade that displays, click the **Web App** option.
+1.  In the **New** blade that displays, click **Web + Mobile**.
 
-1.  In the **Web App** blade that displays, perform the following steps:
+1.	In the **Web + Mobile** blade that displays, click **Web App**.
 
-	a.  In the **URL** box, provide a unique name for your Web App.
+1.  In the **Web App** blade that displays, do the following:
 
-	b.  Click **App Service Plan**.
+	a.  In the **App name** dialog box, provide a unique name for your Web App.
 
-	c.  In the **App Service Plan** blade, locate the **Name** box, and type **Autoscale**.
+	b.  Click **App Service plan/Location** option.
 
-	d.  Locate and select the **S1 Standard** size option.
+	c.  In the **App Service plan** blade, click the **Create New** option.
 
-	e.  Click **OK**.
+	d.	In the new **App Service plan** blade, locate the **App Service plan** box, and type **Autoscale**.
 
-	f.  In the **Web App** blade, click **Create**.
+	e.	Click the **Pricing tier** option.
+
+	f.  In the **Choose your pricing tier** blade, locate and select the **S1 Standard** size option.
+
+	g.	Click the **Select** button.
+
+	h.	In the **App Service plan** blade, click the **OK** button.
+
+	i. 	In the **Web App** blade, locate the **Resource Group** section.
+
+	j.	In the **Resource Group** section, locate the **Create new** radio button and select it.
+
+	k. 	In the **Resource Group** section, locate the dialog box and enter **20532Autoscale** as the name of the *Resource Group*.
+
+	l.  In the **Web App** blade, click **Create**.
 
 1.  After the Web App is created, the new Web App blade will automatically appear.
 
 1.  In the new blade that displays for your Web App, perform the following steps:
 
-	a.  Click the **Settings** tile.
+	a.  In the **Settings** section to the left of the blade, click the **Scale out (App Service plan)** option.
 
-	b.  In the **Settings** section, select the **Scale** option.
+	c.  In the **Scale setting** blade, select the **CPU Percentage** option for the **Scale by** option.
 
-	c.  In the **Scale** blade, select the **Performance** option for the autoscale mode.
+	d.  Set the **Instances** to a minimum value of **2** and a maximum value of **5**.
 
-	d.  Set the **Instance Range** to a minimum value of **2** and a maximum value of **5**.
+	e.  Set the **Target range** threshold to a minimum value of **50** and a maximum value of **70**.
 
-	e.  Set the **CPU Percentage** threshold to a minimum value of **50** and a maximum value of **70**.
-
-	f.  Click save at the top of the blade.
+	f.  Click the **Save** button at the top of the blade.
 
 1.  Close **Internet Explorer**.

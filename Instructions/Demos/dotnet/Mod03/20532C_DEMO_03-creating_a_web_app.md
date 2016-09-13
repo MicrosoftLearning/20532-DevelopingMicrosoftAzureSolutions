@@ -14,51 +14,47 @@
 
 1.  Click **Sign In**.
 
-1.  At the lower-left corner of the screen, click **New**.
+1.  At the top-left corner of the screen, click **New**.
 
-1.  In the **New** blade that displays, click **Everything***.*
+1.  In the **New** blade that displays, click **See all**.
 
-1.  In the **Marketplace** blade that displays, click **Web**.
+1.  In the **Marketplace** blade that displays, click **Web + Mobile**.
 
-1. Under the **Recommended** section, click **Web App + SQL**.
+1. Under the **Web Apps** section, click **Web App + SQL**.
 
 1. In the **Web App + SQL** blade that displays, click **Create**.
 
 1. In the **Web App + SQL** blade that displays, perform the following steps:
 
-	a.  In the **Resource Group** box, type **rg20532**.
+	a.  In the **Resource Group** dialog box, type **rg20532sql**.
 
-	b.  Click **Web App**.
+	b.  In the **App name** box, type a unique name for your Web App.
 
-	c.  In the **Web App** blade that displays, locate the **URL** box.
+	c.  Click the **SQL Database** option.
 
-	d.  In the **URL** box, type a unique name for your Web App.
+	d. In the **Database** blade that displays, click the **Create a new database** option.
 
-	e.  Click **OK**.
+	e.  In the **SQL Database** blade that displays, locate the **Name** box.
 
-	f.  In the **Web App + SQL** blade, click **Database**.
+	f.  In the **Name** box, type **rg20532db**.
 
-	g.  In the **New database** blade that displays, locate the **Name** box.
+	g.  Click the **Target server** option.
 
-	h.  In the **Name** box, type **rg20532db**.
+	h.  In the **New server** blade that displays, locate the **Server name** dialog box.
 
-	i.  Click **Server**.
+	i.  In the **Server name** box, type a unique name for your logical server.
 
-	j.  In the **New server** blade that displays, locate the **Server Name** box.
+	j.  In the **Server admin login** box, type **testuser**.
 
-	k.  In the **Server Name** box, type a unique name for your logical server.
+	k.  In the **Password** box, type **TestPa$$w0rd**.
 
-	l.  In the **Server Admin Login** box, type **testuser**.
+	l.  In the **Confirm password** box, type **TestPa$$w0rd**.
 
-	m.  In the **Password** box, type **TestPa\$\$w0rd**.
+	m.  Click the **Select** button.
 
-	n.  In the **Confirm Password** box, type **TestPa\$\$w0rd**.
+	n.  In the **SQL Database** blade, click the **Select** button.
 
-	o.  Click **OK**.
-
-	p.  In the **New database** blade, click **OK**.
-
-	q.  In the **Web App + SQL** blade, click **Create** to create your Resource Group.
+	o.  In the **Web App + SQL** blade, click **Create** to create your Resource Group.
 
 1.  After the Resource Group is created, the **rg20532** blade will automatically display for your new Web App.
 

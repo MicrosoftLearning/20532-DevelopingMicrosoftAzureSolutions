@@ -34,14 +34,12 @@
 
 1.  In the new blade that displays for your Web App, perform the following steps:
 
-	a.  Click the **Settings** button at the top of the blade.
+	a.  In the **Settings** section to the left of the blade, click the **Application Settings** option.
 
-	b.  In the **Settings** section, click the **Application Settings** option.
+	b.  Locate the **Connection strings** section, and then add a connection string using the **Name** *entrycount* and the **Value** *8*.
 
-	c.  Locate the **Connection strings** section, and then add a connection string using the **Name** *entrycount* and the **Value** *8*.
+	c.  Locate the **App settings** section, and add an app setting using the **Key** *externaldatabase* and the **Value** *URL=http://dataService;Data Format=JSON;Auto Cache=true;*.
 
-	d.  Locate the **App settings** section, and add an app setting using the **Key** *externaldatabase* and the **Value** *URL=http://dataService;Data Format=JSON;Auto Cache=true;*.
-
-	e.  Click the **SAVE** button at the top of the blade.
+	d.  Click the **SAVE** button at the top of the **Application Settings** blade.
 
 1.  Close **Internet Explorer**.
