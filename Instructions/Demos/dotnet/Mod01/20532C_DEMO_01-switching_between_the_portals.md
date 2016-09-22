@@ -14,23 +14,23 @@
 
 1.  Click **Sign In**.
 
-1.  In the navigation pane on the left side, click **Web Sites**.
+1.  In the navigation pane on the left side, click **App Services**.
 
-1.  Click **Create a Web Site**.
+1.  Click **Create a Web App**.
 
 1.  Click **Quick Create**.
 
 1. In the **Url** dialog box, create a unique name for your Website.
 
-1. In the **Web Hosting Plan** list, select the **Create new web hosting plan** option.
+1. In the **App Service Plan** list, select the **Create new App Service plan** option.
 
 1. In the **Region** list, select the **Region** that is closest to your current location.
 
-1. Click the **Create Web Site** check mark button.
+1. Click the **Create Web App** check mark button.
 
 1. At the top-right corner, click your account’s email address to view a drop-down menu.
 
-1. In the drop-down menu, click **Switch to new portal**.
+1. In the drop-down menu, click **Switch to new Azure Portal**.
 
 	> This option will open a new Internet Explorer tab that navigates to the *https://portal.azure.com* URL.
 
@@ -40,18 +40,18 @@
 
 1.  In the navigation pane on the left side, click **More Services**.
 
-1.  Click **Websites**.
+1.  Click **App Services**.
 
-1.  View the pop-up panel that displays on the right side of the portal.
+1.  View the blade that list all of your app instances hosted in *App Services*.
 
-1.  Click the **Website** instance that you created in the previous steps.
+1.  Click the **Web App** instance that you created in the previous steps.
 
-1.  View the new pop-up panel that displays with the details about your **Website** instance.
+1.  View the new blade that displays with the details about your **Web App** instance.
 
 	> Because the Portal is still in preview, you may occasionally see HTTP 520 errors. These are temporary errors that display when the dashboard fails to display a resource.
 
-1.  At the top of the panel where the details of your Website instance are displayed, click Browse.
+1.  At the top of the blade where the details of your Website instance are displayed, click the **Browse** button.
 
-1.	View the placeholder webpage for your new Website that displays in the new Internet Explorer tab.
+1.	View the placeholder webpage for your new *Web App* that displays in the browser.
 
   > The placeholder page displays a message indicating that your Website is successfully created. This page will be displayed until you upload a web application to your new Website.
