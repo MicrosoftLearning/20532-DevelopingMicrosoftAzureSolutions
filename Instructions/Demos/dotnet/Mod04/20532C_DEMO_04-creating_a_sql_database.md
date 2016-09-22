@@ -10,29 +10,33 @@
 
 1.  Click **Continue**.
 
-1.  In the password box, type your password for your Microsoft account.
+1.  In the password box, type your password for your *Microsoft account*.
 
-1.  At the bottom-left corner of the portal, click **New**.
+1.  Click the **Sign in** button.
 
-1.  In the **New** blade that displays, click **Data + Storage**.
-  
-1.  In the **Data + Storage** blade that displays, click **SQL Database**.
+1.  At the top-left corner of the portal, click **New**.
+
+1.  In the **New** blade that displays, click **Databases**.
+
+1.  In the **Databases** blade that displays, click **SQL Database**.
 
 1.  In the **SQL database** blade that displays, perform the following steps:
 
-	a.  In the **Name** box, type **SQLDemo**.
+	a.  In the **Database name** box, type **SQLDemo**.
 
-	b.  Click **Pricing Tier**.
+	b.  Click the **Pricing Tier** option.
 
-	c.  In the **Recommended pricing tier** blade that displays, select the **Basic** option.
+	c.  In the **Choose your pricing tier** blade that displays, select the **Basic** option.
 
 	d.  Click **Select** to close the blade.
 
-	e.  Click **Select Source**.
+	j.	In the **Resource Group** section, locate the **Create new** radio button and select it.
 
-	f.  Select the **Blank Database** option.
+	k. 	In the **Resource Group** section, locate the dialog box and enter **20532SQLSrvr** as the name of the *Resource Group*.
 
-	g.  In the **SQL database** blade, click **Server**.
+	e.  In the **Select source** list, select the **Blank Database** option.
+
+	g.  Click the **Server** option.
 
 	h.  In the **Server** blade that displays, click **Create a new server**.
 
@@ -42,14 +46,14 @@
 
 	k.  In the **Server Admin Login** box, type **testuser**.
 
-	l.  In the **Password** box, type **TestPa\$\$w0rd**.
+	l.  In the **Password** box, type **TestPa$$w0rd**.
 
-	m.  In the **Confirm Password** box, type **TestPa\$\$w0rd**.
+	m.  In the **Confirm Password** box, type **TestPa$$w0rd**.
 
 	n.  In the **Location** box , select the region that is closes to your location.
-	
+
 	o.  In the **Create V12 server (Latest update)** checkbox, select **Yes**.
 
 	p.  In the **New server** blade, click **Select**.
 
-1.  In the **SQL database** blade, click **Create** to create the SQL database and Server.
+1.  In the **SQL database** blade, click the **Create** button to create the SQL database and Server.
