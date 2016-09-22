@@ -66,17 +66,19 @@
 
 1.  In the **Solution ‘Contoso.Events’** **Property Pages** dialog box, perform the following steps:
 
-	a.  Make sure that **CommonProperties** =&gt; **Startup Project** is selected in the navigation menu on the left side of the screen.
+	a.  Make sure that **CommonProperties - Startup Project** is selected in the navigation menu on the left side of the screen.
 
 	b.  Click **Multiple startup projects**.
 
-	c.  For **Contoso.Events.Cloud**, set the **Action** to **Start**.
+	c.  For **Contoso.Events.Web**, set the **Action** to **Start**.
 
-	d.  For **Contoso.Events.Management**, set the **Action** to **Start without debugging**.
+	d.  For **Contoso.Events.Management.Old**, set the **Action** to **Start**.
 
-	e.  Ensure that for all the remaining projects, the **Action** is set to **None**.
+	e.  For **Contoso.Events.Worker**, set the **Action** to **Start**.
 
-	f.  To close the dialog box, click **OK**.
+	f.  Ensure that for all the remaining projects, the **Action** is set to **None**.
+
+	g.  To close the dialog box, click **OK**.
 
 1.  On the **Debug** menu, click **Start Debugging**.
 

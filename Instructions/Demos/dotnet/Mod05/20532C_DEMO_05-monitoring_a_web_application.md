@@ -5,7 +5,7 @@
 1. On the Start screen, locate and click the **Visual Studio 2015** tile.
 
   > **Note:** You might have to use the down arrow to locate the Visual Studio 2015 tile on your Start screen.
-	
+
 1.  On the **File** menu, point to **New**, and then click **Project**.
 
 1.  In the **New Project** dialog box that displays, perform the following steps:
@@ -42,11 +42,11 @@
 
 1.  In the **Create App Service** dialog box, perform the following steps:
 
-	a.  Select the ContosoEventsWeb App Service Plan.
+	a.  Do not modify the randomly-generated Web App name.
 
-	b.  Leave all other options to their default values.
+			> **Note:** Values for Resource Group, Subscription and App Service Plan should already be selected. You can modify these selections if you wish.
 
-	c.  Click **Create**.
+	b.  Click **Create**.
 
 1.  In the **Solution Explorer** pane, expand the **Contoso.Help** project, expand the **Controllers** folder, and then double-click the **HomeController.cs** file.
 
