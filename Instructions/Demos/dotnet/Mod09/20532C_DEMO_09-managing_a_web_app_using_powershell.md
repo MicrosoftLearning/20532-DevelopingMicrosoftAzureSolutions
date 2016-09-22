@@ -12,7 +12,9 @@
 	Add-AzureAccount
 	```
 
-1.  In the **Sign in to Windows Azure** dialog box, perform the following steps:
+	> **Note:** If you have not used *Windows PowerShell* before, you may be prompted to allow PowerShell to collect usage data. You can safely skip this dialog.
+
+1.  In the **Sign in to your account** dialog box, perform the following steps:
 
 	a.  Enter the email address of your Microsoft account..
 
@@ -58,7 +60,7 @@
 
 1.  Close Internet Explorer.
 
-1.  Switch to the **Microsoft Azure PowerShell** console window.
+1.  Switch to the **Windows PowerShell** console window.
 
 1.  To import your publish settings file, type the following command in the console, and then press Enter:
 
@@ -118,4 +120,4 @@
 	Get-AzureWebsite –Name [Unique Name]
 	```
 
-1.  Close the **Microsoft Azure PowerShell** console window.
+1.  Close the **Windows PowerShell** console window.

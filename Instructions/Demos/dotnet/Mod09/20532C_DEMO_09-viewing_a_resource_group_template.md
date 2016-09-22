@@ -14,7 +14,7 @@
 
 	> **Note:** If you have not used *Windows PowerShell* before, you may be prompted to allow PowerShell to collect usage data. You can safely skip this dialog.
 
-1.  In the **Sign in to Windows Azure** dialog box, perform the following steps:
+1.  In the **Sign in to your account** dialog box, perform the following steps:
 
 	a.  Enter the email address of your Microsoft account.
 
@@ -42,4 +42,4 @@
 	Find-AzureRmResource -ResourceGroupNameContains "20532Auto"
 	```
 
-1.  Close the **Microsoft Azure PowerShell** console window.
+1.  Close the **Windows PowerShell** console window.
