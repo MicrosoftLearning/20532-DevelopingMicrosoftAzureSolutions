@@ -10,13 +10,13 @@
 
 1.  In the **New Project** dialog box, perform the following steps:
 
-1.  Expand **Templates**, **Visual C\#**, and then click **Windows Desktop**.
+1.  Expand **Templates**, **Visual C\#**, and then click **Classic Desktop**.
 
 1.  Click the **Console Application** template.
 
 1.  In the **Name** box, enter the value **Contoso.Storage.Table**.
 
-1.  In the **Location** box, specify the value **AllFiles (F):\\Mod07\\Labfiles\\Starter**
+1.  In the **Location** box, specify the value **AllFiles (F):\\Mod06\\Labfiles\\Starter**
 
 1.  Click **OK**.
 

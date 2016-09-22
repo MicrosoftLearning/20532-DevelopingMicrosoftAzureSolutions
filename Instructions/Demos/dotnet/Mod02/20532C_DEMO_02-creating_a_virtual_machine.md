@@ -22,11 +22,15 @@
 
 1. In the **Virtual machines** blade that displays, view your list of Virtual Machine instances.
 
-1. At the lower-left corner of the screen, click **New**.
+1. At the top-left corner of the screen, click **New**.
 
-1. In the **New** blade that displays, click **Windows Server 2012 R2 Datacenter**.
+1. In the **New** blade that displays, click the **Compute** option.
 
-1. In the **Create VM** blade that displays, perform the following steps:
+1. In the **Compute** blade that displays, click **Windows Server 2012 R2 Datacenter**.
+
+1. In the **Windows Server 2012 R2 Datacenter** blade that displays, click the **Create** button.
+
+1. In the **Create virtual machine** blade that displays, perform the following steps:
 
 	a.  In the **Name** box, provide a value with the prefix **vm20532demo** followed by your name.
 
@@ -34,7 +38,7 @@
 
 	c.  In the **User Name** box, provide the value **Instructor**.
 
-	d.  In the **Password** box, provide the value **AzurePa$$w0rd**.
+	d.  In the **Password** box and **Confirm Password** boxes, provide the value **AzurePa$$w0rd**.
 
 	e.  Click **Pricing Tier**.
 

@@ -50,7 +50,7 @@
 
 1. Close the Contoso.Events – Microsoft Visual Studio application.
 
-1. On the Start Screen, right-click the **Visual Studio 2013** tile, and then click **Run as Administrator**.
+1. On the Start Screen, right-click the **Visual Studio 2015** tile, and then click **Run as Administrator**.
 
 1. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 
