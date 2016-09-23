@@ -14,7 +14,7 @@
 
 1.  Click **Sign In**.
 
-1.  In the navigation pane on the left side, click **App Services**.
+1.  In the navigation pane on the left side, click **Web Apps**.
 
 1.  Click **Create a Web App**.
 

@@ -26,15 +26,15 @@
 
 1.  In the **New** panel that displays, click **See all**.
 
-1.  In the **Marketplace** blade that displays, click **Virtual machines**.
+1.  In the **Everything** blade that displays, click **Compute**.
 
-1.  In the **Virtual machines** blade that displays, click the **Ubuntu Server** option.
+1.  In the **Compute** blade that displays, click the **Ubuntu Server** option.
 
-1.  In the **Virtual machines** blade that displays, click the latest version of **Ubuntu Server LTS**.
+1.  In the **Ubuntu Server** blade that displays, click the latest version of **Ubuntu Server LTS**.
 
 	> The version number for Ubuntu Server is not important in this demonstration. Also, you might have to scroll down to find the Ubuntu Server option
 
-1.  In the **Ubuntu Server** blade that displays, click **Create**.
+1.  In the **Ubuntu Server** blade that displays, click the **Create** button.
 
 1.  In the **Basics** blade that displays, locate the **Name** dialog box and type any value.
 

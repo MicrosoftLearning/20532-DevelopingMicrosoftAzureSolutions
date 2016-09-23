@@ -40,19 +40,19 @@
 
 	d.  In the **Password** box and **Confirm Password** boxes, provide the value **AzurePa$$w0rd**.
 
-	e.  Click **Pricing Tier**.
+	e.	In the **Resource Group** section, locate the **Create new** radio button and select it.
 
-	f.  In the **Recommend Pricing Tiers** blade, click **Browse All Pricing Tiers**.
+	f. 	In the **Resource Group** section, locate the dialog box and enter **20532VirtualMachine** as the name of the *Resource Group*.
 
-	g.  Select **A2 Standard**.
+	g.  Click **Pricing Tier**.
 
-	h.  Click **Select**.
+	h.  In the **Recommend Pricing Tiers** blade, click **Browse All Pricing Tiers**.
 
-	i.  In the Recommended Pricing Tiers blade, click **Select**.
+	i.  Select **A2 Standard**.
 
-	j.	In the **Resource Group** section, locate the **Create new** radio button and select it.
+	j.  Click **Select**.
 
-	k. 	In the **Resource Group** section, locate the dialog box and enter **20532VirtualMachine** as the name of the *Resource Group*.
+	k.  In the Recommended Pricing Tiers blade, click **Select**.
 
 	l.  To create the virtual machine by using your specified configuration, click **Create**.
 
