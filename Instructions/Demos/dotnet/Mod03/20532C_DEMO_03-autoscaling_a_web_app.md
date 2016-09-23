@@ -46,7 +46,11 @@
 
 	l.  In the **Web App** blade, click **Create**.
 
-1.  After the Web App is created, the new Web App blade will automatically appear.
+1.  After the Web App is created, click the **More services** link in the left navigation bar.
+
+1.	Click the **App Services** option.
+
+1.	Locate and click the **Web App** item in the list that you just created to open the app's blade.
 
 1.  In the new blade that displays for your Web App, perform the following steps:
 

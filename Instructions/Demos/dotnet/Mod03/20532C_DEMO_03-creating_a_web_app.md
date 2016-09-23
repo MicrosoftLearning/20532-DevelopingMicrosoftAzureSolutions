@@ -26,7 +26,7 @@
 
 1. In the **Web App + SQL** blade that displays, perform the following steps:
 
-	a.  In the **Resource Group** dialog box, type **rg20532sql**.
+	a.  In the **Resource Group** dialog box, type **20532webapp**.
 
 	b.  In the **App name** box, type a unique name for your Web App.
 
@@ -36,7 +36,7 @@
 
 	e.  In the **SQL Database** blade that displays, locate the **Name** box.
 
-	f.  In the **Name** box, type **rg20532db**.
+	f.  In the **Name** box, type **sql20532db**.
 
 	g.  Click the **Target server** option.
 
@@ -50,17 +50,21 @@
 
 	l.  In the **Confirm password** box, type **TestPa$$w0rd**.
 
-	m.  Click the **Select** button.
+	m. In the **Location** box, select the region that is closest to you.
 
-	n.  In the **SQL Database** blade, click the **Select** button.
+	n.  Click the **Select** button.
 
-	o.  In the **Web App + SQL** blade, click **Create** to create your Resource Group.
+	o.  In the **SQL Database** blade, click the **Select** button.
 
-1.  After the Resource Group is created, the **rg20532** blade will automatically display for your new Web App.
+	p.  In the **Web App + SQL** blade, click **Create** to create your Resource Group.
 
-1.  In the **rg20532** blade that displays, click the icon of the new Web App resource that you created.
+1.  After the Resource Group is created, click the **More services** link in the left navigation bar.
 
-	> The **Summary** area contains icons for each resource in your Resource Group. The single Web App resource is the icon you should select.
+1.	Click the **Resource groups** option.
+
+1.	Click the **20532webapp** resource group item in the list to open the group's blade.
+
+1.  In the **20532webapp** blade that displays, click the icon of the new Web App resource that you created.
 
 1.  In the new blade that displays, locate the **Settings** section.
 
