@@ -62,9 +62,9 @@
 
 1.	Click the **Resource groups** option.
 
-1.	Click the **20532webapp** resource group item in the list to open the group's blade.
+1.	Click the **20532simpleapp** resource group item in the list to open the group's blade.
 
-1.  In the **20532webapp** blade that displays, click the icon of the new Web App resource that you created.
+1.  In the **20532simpleapp** blade that displays, click the icon of the new Web App resource that you created.
 
 1.  In the new blade that displays, locate the **Settings** section.
 
