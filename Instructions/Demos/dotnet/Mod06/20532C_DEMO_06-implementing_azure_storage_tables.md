@@ -272,7 +272,7 @@
 
 19. Double-click the **MicrosoftAzureStorageEmulator.msi** file to start the emulator.
 
-20. In the **Microsoft Azure Storage Emulator - v4.5 Setup** wizard, select the *checkbox* to **accept the terms in the License Agreement**.
+20. In the **Microsoft Azure Storage Emulator Setup** wizard, select the *checkbox* to **accept the terms in the License Agreement**.
 
 21. Click the **Install** button to install the emulator.
 
@@ -284,7 +284,7 @@
 
 1.  On the Start screen, type **Azure Storage Emulator**.
 
-1.  Click the **Microsoft Azure Storage Emulator – v4.5** tile.
+1.  Click the **Microsoft Azure Storage Emulator** tile.
 
 1.  After the command-line application is finished, close the open console window.
 
