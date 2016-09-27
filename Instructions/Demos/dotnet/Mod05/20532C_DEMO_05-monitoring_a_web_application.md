@@ -46,7 +46,11 @@
 
 			> **Note:** Values for Resource Group, Subscription and App Service Plan should already be selected. You can modify these selections if you wish.
 
-	b.  Click **Create**.
+	b.	Click the **New** button in the **App Service Plan** section.
+	
+  c.	In the **Configure App Service Plan** dialog, click the **OK** button.
+
+	d.  Back in the **Create App Service** dialog box, click the **Create** button.
 
 1.  In the **Solution Explorer** pane, expand the **Contoso.Help** project, expand the **Controllers** folder, and then double-click the **HomeController.cs** file.
 
@@ -130,17 +134,15 @@
 
 	b.  Click the **Select** button.
 
-1.  In the website blade, locate the **Summary** section and the tile that displays the Application Insights icon in your resource group.
-
-	> The Summary tile contains a reference to your resource group, a large icon for your Website, and small icons for related resources, such as a SQL Database instance, your hosting plan, and an Application Insights instance. A purple-colored light bulb icon represents the Application Insights hyperlink.
-
 1.  In the navigation pane on the left side of the screen, scroll down, and then click **More Services**.
 
 1.  Click **Application Insights**.
 
-1.  In the new **ASP.NET Application Insights** blade that displays, view the tiles and dashboard for your Website instance.
+1.  In the new **Application Insights** blade that displays, click your **Web App** instance and view the tiles and dashboard.
 
-1.  Scroll down and click the **All webtests response time (ms)** tile.
+1.	Scroll down and click the **Web tests** title.
+
+1.	In the **All webtests response time (ms)** tile, click **Add web test** button.
 
 1.  In the **Create test** blade that displays, perform the following steps:
 

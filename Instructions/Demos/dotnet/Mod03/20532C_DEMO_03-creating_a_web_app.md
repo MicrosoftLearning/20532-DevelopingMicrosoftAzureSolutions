@@ -26,7 +26,7 @@
 
 1. In the **Web App + SQL** blade that displays, perform the following steps:
 
-	a.  In the **Resource Group** dialog box, type **20532webapp**.
+	a.  In the **Resource Group** dialog box, type **20532simpleapp**.
 
 	b.  In the **App name** box, type a unique name for your Web App.
 
