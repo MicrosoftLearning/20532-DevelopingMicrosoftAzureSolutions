@@ -28,7 +28,7 @@
     "virtualNetworkName": "[concat(variables('virtualNetworkNamePrefix'), variables('coursePrefix'))]",
     "imagePublisher": "MicrosoftVisualStudio",
     "imageOffer": "VisualStudio",
-    "imageSku": "VS-2015-Comm-AzureSDK-2.9-WS2012R2",
+    "imageSku": "VS-2015-Comm-VSU3-AzureSDK-291-WS2012R2",
     "imageVersion": "latest",
     "virtualMachineSize": "Standard_F4",
     "adminUsername": "Student",
