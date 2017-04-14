@@ -4,7 +4,7 @@
 
 1.  On the Start screen, click the **Internet Explorer** tile.
 
-1.  Go to [*https://manage.windowsazure.com*](https://manage.windowsazure.com).
+1.  Go to [*http://manage.windowsazure.com*](http://manage.windowsazure.com).
 
 1.  In the email address box, type the email address of your Microsoft account.
 
