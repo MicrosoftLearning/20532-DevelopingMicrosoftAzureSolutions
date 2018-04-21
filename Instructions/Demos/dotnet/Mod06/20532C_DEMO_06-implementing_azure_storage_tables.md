@@ -2,7 +2,7 @@
 
 # Demo: Implementing Azure Storage Tables
 
-1. On the Start screen, locate and click the **Visual Studio 2017** tile.
+1.  On the Start screen, locate and click the **Visual Studio 2017** tile.
 
   > **Note:** You might have to use the down arrow to locate the Visual Studio 2017 tile on your Start screen.
 
@@ -124,10 +124,10 @@
 
 	```
 	public override string ToString()
-  {
-
-  }
-  ```
+	{
+	
+	}
+	```
 
 1.  Within the **ToString** method, add the following line of code:
 
