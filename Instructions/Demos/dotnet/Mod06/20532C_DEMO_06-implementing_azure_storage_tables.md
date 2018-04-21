@@ -4,7 +4,7 @@
 
 1.  On the Start screen, locate and click the **Visual Studio 2017** tile.
 
-  > **Note:** You might have to use the down arrow to locate the Visual Studio 2017 tile on your Start screen.
+	> **Note:** You might have to use the down arrow to locate the Visual Studio 2017 tile on your Start screen.
 
 1.  On the **File** menu, point to **New,** and then click **Project**.
 
@@ -264,7 +264,7 @@
 
 16. In the **Internet Explorer** download dialog box, click **Save**.
 
-  > **Note:** The download of the *Azure Storage Emulator* executable typically takes around five minutes.
+	> **Note:** The download of the *Azure Storage Emulator* executable typically takes around five minutes.
 
 17. Click the **Windows File Explorer** icon in your Taskbar.
 
