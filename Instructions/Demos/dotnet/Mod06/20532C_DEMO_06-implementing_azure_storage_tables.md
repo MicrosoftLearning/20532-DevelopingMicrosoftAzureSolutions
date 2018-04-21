@@ -215,10 +215,10 @@
 
 	```
 	foreach (Employee hrEmployee in table.ExecuteQuery<Employee>(query))
-  {
-
-  }
-  ```
+	{
+	
+	}
+	```
 
 1.  Within the loop, write the **Employee** object to the Console window, as shown below:
 
