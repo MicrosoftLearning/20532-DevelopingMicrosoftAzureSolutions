@@ -1,0 +1,61 @@
+﻿@model EventsGridViewModel
+<article class="container py-5">
+    <table class="table table-striped table-hover ">
+        <thead class="thead-dark">
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Registrants</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Event item in Model.Events)
+            {
+                <tr>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td>
+                        @item.StartTime.ToShortDateString()
+                    </td>
+                    <td>
+                        @item.RegistrationCount
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" asp-route="EventDetail" asp-route-key="@item.EventKey">
+                            Go to Event
+                            <i class="fa fa-sign-in ml-2" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        <form>
+            @{
+                int numberOfPages = (int)Math.Ceiling(Model.TotalRows / (double)Model.PageSize);
+            }
+            <nav>
+                <ul class="pagination justify-content-center">
+                    <li class="page-item @(Model.CurrentPage <= 1 ? "disabled" : String.Empty)">
+                        <a class="page-link" asp-route="EventList" asp-route-page="@(Model.CurrentPage - 1)">
+                            <i class="fa fa-backward" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="page-item disabled">
+                        <span class="page-link">
+                            Page @Model.CurrentPage / @numberOfPages
+                        </span>
+                    </li>
+                    <li class="page-item @(Model.CurrentPage >= numberOfPages ? "disabled" : String.Empty)">
+                        <a class="page-link" asp-route="EventList" asp-route-page="@(Model.CurrentPage + 1)">
+                            <i class="fa fa-forward" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </form>
+    </div>
+</article>

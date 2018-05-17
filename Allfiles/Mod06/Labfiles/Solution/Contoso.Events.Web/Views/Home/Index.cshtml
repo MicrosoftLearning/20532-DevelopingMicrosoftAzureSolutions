@@ -1,0 +1,27 @@
+﻿@model UpcomingEventsViewModel
+<article class="container py-5">
+    <h1 class="display-1">Upcoming Events</h1>
+    <div class="list-group pt-4">
+        @foreach (Event item in Model.Events)
+        {
+            <a class="list-group-item list-group-item-action flex-column align-items-start" asp-route="EventDetail" asp-route-key="@item.EventKey">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">
+                        @item.Title
+                    </h5>
+                    <small>
+                        @(item.RegistrationCount > 0 ? $"{item.RegistrationCount} Registered" : "No Registrants")
+                    </small>
+                </div>
+                <p class="mb-1">
+                    @Html.Raw(WebUtility.HtmlDecode(item.Description))
+                </p>
+                <small>
+                    @item.StartTime.ToString("dd/MM/yy HH:mm tt")
+                    &nbsp;-&nbsp;
+                    @item.EndTime.ToString("dd/MM/yy HH:mm tt")
+                </small>
+            </a>
+        }
+    </div>
+</article>

@@ -1,0 +1,42 @@
+﻿@model EventsListViewModel
+<article class="container py-5">
+    <h1 class="display-1">
+        Events Administration
+    </h1>
+    <table class="table table-striped table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Registrants</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Event item in Model.Events)
+            {
+                <tr>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td>
+                        @item.StartTime.ToShortDateString()
+                    </td>
+                    <td>
+                        @item.RegistrationCount
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <a class="btn btn-info btn-sm" asp-route="SignIn" asp-route-id="@item.Id">
+                                Generate Sign-In Sheet
+                                <i class="fa fa-inbox ml-2" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <small class="font-italic font-weight-light">
+        Upcoming @Model.LatestEventCount Events
+    </small>
+</article>

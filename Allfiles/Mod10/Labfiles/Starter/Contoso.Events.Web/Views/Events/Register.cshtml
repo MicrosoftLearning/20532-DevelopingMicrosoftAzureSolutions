@@ -1,0 +1,11 @@
+﻿@model RegisterViewModel
+<article class="container py-5">
+    <h3 class="display-3">
+        @Model.Event.Title
+    </h3>
+    <form asp-route="SubmitRegistration" asp-route-key="@Model.Event.EventKey" method="post">
+        @Html.AntiForgeryToken()
+        @Html.EditorFor(m => m.RegistrationStub)
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</article>

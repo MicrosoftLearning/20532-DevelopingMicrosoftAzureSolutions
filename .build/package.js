@@ -22,6 +22,9 @@ marked.setOptions({
   smartypants: false
 });
 
+var version = args.version || "0.0.0";
+var course = args.course || "00000";
+
 var filesInputDirectory = path.join(__dirname, "../Allfiles/");
 var docLabsInputDirectory = path.join(__dirname, "../Instructions/Labs/");
 var docDemosInputDirectory = path.join(__dirname, "../Instructions/Demos/");
@@ -29,8 +32,8 @@ var tempDirectory = path.join(__dirname, "tmp");
 var docsTempDirectory = path.join(tempDirectory, "Instructions/");
 var filesTempDirectory = path.join(tempDirectory, "AllFiles/");
 var outputDirectory = path.join(__dirname, "out");
-var filesOutputZip = path.join(outputDirectory, "allfiles-v" + args.version + ".zip");
-var docsOutputZip = path.join(outputDirectory, "lab_instructions-v" + args.version + ".zip");
+var filesOutputZip = path.join(outputDirectory, "allfiles-v" + version + ".zip");
+var docsOutputZip = path.join(outputDirectory, "lab_instructions-v" + version + ".zip");
 
 if (fs.existsSync(tempDirectory)) {
     del.sync([tempDirectory]);
@@ -94,7 +97,7 @@ function cleanup() {
 }
 
 function buildDocx(markdownPath, baseFileName) {
-    var docxFilePath = createDocxFile(markdownPath, args.course + '_' + baseFileName + '.docx');
+    var docxFilePath = createDocxFile(markdownPath, course + '_' + baseFileName + '.docx');
     return docxFilePath;
 }
 

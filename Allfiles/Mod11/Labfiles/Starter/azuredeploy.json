@@ -1,0 +1,273 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "webAppPublicPackageUri": {
+            "type": "string",
+            "defaultValue": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/master/Allfiles/Mod11/Labfiles/Contoso.Events.Web.zip"
+        },
+        "webAppManagementPackageUri": {
+            "type": "string",
+            "defaultValue": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/master/Allfiles/Mod11/Labfiles/Contoso.Events.Management.zip"
+        },
+        "functionAppZipUri": {
+            "type": "string",
+            "defaultValue": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/master/Allfiles/Mod11/Labfiles/Contoso.Events.Worker.zip"
+        }
+    },
+    "variables": {
+        "storageAccountName": "[concat('stor', uniqueString(resourceGroup().id))]",
+        "sqlServerName": "[concat('srvr', uniqueString(resourceGroup().id))]",
+        "sqlDatabaseName": "[concat('sqdb', uniqueString(resourceGroup().id))]",
+        "cosmosAccountName": "[concat('csms', uniqueString(resourceGroup().id))]",
+        "appServicePlanName": "[concat('plan', uniqueString(resourceGroup().id))]",
+        "webAppPublicName": "[concat('webp', uniqueString(resourceGroup().id))]",
+        "webAppManagementName": "[concat('webm', uniqueString(resourceGroup().id))]",
+        "functionAppName": "[concat('func', uniqueString(resourceGroup().id))]",
+        "sqlAdministratorLogin": "testuser",
+        "sqlAdministratorPassword": "TestPa$$w0rd"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2017-10-01",
+            "name": "[variables('storageAccountName')]",
+            "location": "[resourceGroup().location]",
+            "kind": "StorageV2",
+            "sku": {
+                "name": "Standard_LRS"
+            },
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.Sql/servers",
+            "apiVersion": "2015-05-01-preview",
+            "name": "[variables('sqlServerName')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "administratorLogin": "[variables('sqlAdministratorLogin')]",
+                "administratorLoginPassword": "[variables('sqlAdministratorPassword')]",
+                "version": "12.0"
+            },
+            "resources": [
+                {
+                    "type": "databases",
+                    "apiVersion": "2014-04-01",
+                    "name": "[variables('sqlDatabaseName')]",
+                    "location": "[resourceGroup().location]",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Sql/servers/', variables('sqlServerName'))]"
+                    ],
+                    "properties": {
+                        "edition": "Basic"
+                    }
+                },
+                {
+                    "type": "firewallrules",
+                    "apiVersion": "2015-05-01-preview",
+                    "name": "AllowAllWindowsAzureIps",
+                    "location": "[resourceGroup().location]",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Sql/servers/', variables('sqlServerName'))]"
+                    ],
+                    "properties": {
+                        "startIpAddress": "0.0.0.0",
+                        "endIpAddress": "0.0.0.0"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Microsoft.DocumentDB/databaseAccounts",
+            "apiVersion": "2015-04-08",
+            "name": "[variables('cosmosAccountName')]",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "name": "[variables('cosmosAccountName')]",
+                "databaseAccountOfferType": "Standard"
+            }
+        },
+        {
+            "type": "Microsoft.Web/serverfarms",
+            "apiVersion": "2016-09-01",
+            "name": "[variables('appServicePlanName')]",
+            "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "S1",
+                "capacity": 1
+            },
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2015-08-01",
+            "name": "[variables('webAppPublicName')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms/', variables('appServicePlanName'))]",
+                "[resourceId('Microsoft.Sql/servers/databases/', variables('sqlServerName'), variables('sqlDatabaseName'))]",
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts/', variables('cosmosAccountName'))]"
+            ],
+            "properties": {
+                "name": "[variables('webAppPublicName')]",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
+                "httpsOnly": true,
+                "clientAffinityEnabled": false,
+                "siteConfig": {
+                    "alwaysOn": true,
+                    "appSettings": [
+                        {
+                            "name": "CosmosSettings:EndpointUrl",
+                            "value": "[reference(concat('Microsoft.DocumentDb/databaseAccounts/', variables('cosmosAccountName'))).documentEndpoint]"
+                        },
+                        {
+                            "name": "CosmosSettings:AuthorizationKey",
+                            "value": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', variables('cosmosAccountName')), '2015-04-08').primaryMasterKey]"
+                        }
+                    ],
+                    "connectionStrings": [
+                        {
+                            "name": "EventsContextConnectionString",
+                            "connectionString": "[concat('Data Source=tcp:', reference(concat('Microsoft.Sql/servers/', variables('sqlServerName'))).fullyQualifiedDomainName, ',1433;Initial Catalog=', variables('sqlDatabaseName'), ';User Id=', variables('sqlAdministratorLogin'), '@', reference(concat('Microsoft.Sql/servers/', variables('sqlserverName'))).fullyQualifiedDomainName, ';Password=', variables('sqlAdministratorPassword'), ';')]",
+                            "type": "SQLAzure"
+                        }
+                    ]
+                }
+            },
+            "resources": [
+                {
+                    "type": "extensions",
+                    "apiVersion": "2015-08-01",
+                    "name": "MSDeploy",
+                    "location": "[resourceGroup().location]",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/sites', variables('webAppPublicName'))]"
+                    ],
+                    "properties": {
+                        "packageUri": "[parameters('webAppPublicPackageUri')]"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2015-08-01",
+            "name": "[variables('webAppManagementName')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms/', variables('appServicePlanName'))]",
+                "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
+                "[resourceId('Microsoft.Sql/servers/databases/', variables('sqlServerName'), variables('sqlDatabaseName'))]",
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts/', variables('cosmosAccountName'))]"
+            ],
+            "properties": {
+                "name": "[variables('webAppManagementName')]",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
+                "httpsOnly": true,
+                "clientAffinityEnabled": false,
+                "siteConfig": {
+                    "alwaysOn": true,
+                    "appSettings": [
+                        {
+                            "name": "StorageSettings:ConnectionString",
+                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2017-10-01').keys[0].value, ';')]"
+                        },
+                        {
+                            "name": "CosmosSettings:EndpointUrl",
+                            "value": "[reference(concat('Microsoft.DocumentDb/databaseAccounts/', variables('cosmosAccountName'))).documentEndpoint]"
+                        },
+                        {
+                            "name": "CosmosSettings:AuthorizationKey",
+                            "value": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', variables('cosmosAccountName')), '2015-04-08').primaryMasterKey]"
+                        }
+                    ],
+                    "connectionStrings": [
+                        {
+                            "name": "EventsContextConnectionString",
+                            "connectionString": "[concat('Data Source=tcp:', reference(concat('Microsoft.Sql/servers/', variables('sqlServerName'))).fullyQualifiedDomainName, ',1433;Initial Catalog=', variables('sqlDatabaseName'), ';User Id=', variables('sqlAdministratorLogin'), '@', reference(concat('Microsoft.Sql/servers/', variables('sqlserverName'))).fullyQualifiedDomainName, ';Password=', variables('sqlAdministratorPassword'), ';')]",
+                            "type": "SQLAzure"
+                        }
+                    ]
+                }
+            },
+            "resources": [
+                {
+                    "type": "extensions",
+                    "apiVersion": "2015-08-01",
+                    "name": "MSDeploy",
+                    "location": "[resourceGroup().location]",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/sites', variables('webAppManagementName'))]"
+                    ],
+                    "properties": {
+                        "packageUri": "[parameters('webAppManagementPackageUri')]"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2015-08-01",
+            "name": "[variables('functionAppName')]",
+            "location": "[resourceGroup().location]",
+            "kind": "functionapp",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms/', variables('appServicePlanName'))]",
+                "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
+                "[resourceId('Microsoft.Sql/servers/databases/', variables('sqlServerName'), variables('sqlDatabaseName'))]",
+                "[resourceId('Microsoft.DocumentDB/databaseAccounts/', variables('cosmosAccountName'))]"
+            ],
+            "properties": {
+                "name": "[variables('functionAppName')]",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
+                "httpsOnly": true,
+                "clientAffinityEnabled": false,
+                "siteConfig": {
+                    "alwaysOn": true,
+                    "appSettings": [
+                        {
+                            "name": "AzureWebJobsStorage",
+                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2017-10-01').keys[0].value, ';')]"
+                        },
+                        {
+                            "name": "AzureWebJobsDashboard",
+                            "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';AccountKey=', listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2017-10-01').keys[0].value, ';')]"
+                        },
+                        {
+                            "name": "EventsContextConnectionString",
+                            "value": "[concat('Data Source=tcp:', reference(concat('Microsoft.Sql/servers/', variables('sqlServerName'))).fullyQualifiedDomainName, ',1433;Initial Catalog=', variables('sqlDatabaseName'), ';User Id=', variables('sqlAdministratorLogin'), '@', reference(concat('Microsoft.Sql/servers/', variables('sqlserverName'))).fullyQualifiedDomainName, ';Password=', variables('sqlAdministratorPassword'), ';')]"
+                        },
+                        {
+                            "name": "CosmosEndpointUrl",
+                            "value": "[reference(concat('Microsoft.DocumentDb/databaseAccounts/', variables('cosmosAccountName'))).documentEndpoint]"
+                        },
+                        {
+                            "name": "CosmosAuthorizationKey",
+                            "value": "[listKeys(resourceId('Microsoft.DocumentDb/databaseAccounts', variables('cosmosAccountName')), '2015-04-08').primaryMasterKey]"
+                        },
+                        {
+                            "name": "FUNCTIONS_EXTENSION_VERSION",
+                            "value": "beta"
+                        }
+                    ],
+                    "connectionStrings": []
+                }
+            },
+            "resources": [
+                {
+                    "type": "extensions",
+                    "apiVersion": "2015-08-01",
+                    "name": "MSDeploy",
+                    "location": "[resourceGroup().location]",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/sites', variables('functionAppName'))]"
+                    ],
+                    "properties": {
+                        "packageUri": "[parameters('functionAppZipUri')]"
+                    }
+                }
+            ]
+        }
+    ],
+    "outputs": {}
+}

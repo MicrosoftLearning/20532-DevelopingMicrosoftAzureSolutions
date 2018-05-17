@@ -48,7 +48,7 @@
 
 	a. In the **Name** dialog box, provide the value **vnet20532**.
 
-	a. Ensure that the **Address space** box has the value **10.0.0.0/16**.
+	a. Ensure that the **Address space** field has the value **10.0.0.0/16**.
 
 	a. In the **Resource group** section, select the **Use existing** option.
 
@@ -56,9 +56,9 @@
 
 	a. In the **Location** list, select the region that is closest to your current location.
 
-	a. Within the **Subnet** section, in the **Name** box, provide the value **Apps**.
+	a. Within the **Subnet** section, in the **Name** field, provide the value **Apps**.
 
-	a. Within the **Subnet** section, ensure that the **Address range** box has the value **10.0.0.0/24**.
+	a. Within the **Subnet** section, ensure that the **Address range** field has the value **10.0.0.0/24**.
 
 	a. Click the **Create** button.
 
@@ -68,7 +68,7 @@
 
 #### Task 1: Create a Storage Account
 
-1. In the navigation pane on the left side of the Azure Portal, scroll down, and click **All services**.
+1. In the navigation pane on the left side of the Azure Portal, click **All services**.
 
 1. In the **All services** blade that displays, click **Storage Accounts**.
 
@@ -78,7 +78,7 @@
 
 1. In the **Create storage account** blade that displays, perform the following steps:
 
-	a. In the **Name** box, provide the value **stor20532[your name in lowercase here]**.
+	a. In the **Name** field, provide the value **stor20532[your name in lowercase here]**.
 
 	a. In the **Deployment model** section, ensure that the *Resource manager* option is selected.
 
@@ -96,15 +96,13 @@
 
 	a. In the **Resource group** section, locate the dialog box and provide the value **20532**.
 
-	a. Ensure that the **Pin to Dashboard** option is selected.
+	a. Click the **Create** button.
 
-	a. Click **Create**.
-
-	> **Note** Wait for Azure to finish creating the storage account prior to moving forward with the lab. You will receive a notification when the *Storage Account* is created and you will see the Storage Account's blade.
+> **Note**: Wait for Azure to finish creating the storage account prior to moving forward with the lab. You will receive a notification when the *Storage Account* is created and you will see the Storage Account's blade.
 
 #### Task 2: Create a Virtual Machine
 
-1. In the navigation pane on the left side of the Azure Portal, scroll down, and click **All services**.
+1. In the navigation pane on the left side of the Azure Portal, click **All services**.
 
 1. In the **All services** blade that displays, click **Virtual machines**.
 
@@ -178,7 +176,7 @@
 
 1. In the **Attach unmanaged disk** blade, perform the following steps:
 
-	a. In the **Name** box, provide **vm20532-AllFiles**
+	a. In the **Name** field, provide **vm20532-AllFiles**
 
 	a. For **Source type**, select **New (empty disk)**
 
@@ -238,7 +236,7 @@
 
 1. In the navigation pane on the left side, click **Local Server**.
 
-1. In the **Properties** box, click the **IE Enhanced Security Configuration** option that is currently set to **On**.
+1. In the **Properties** field, click the **IE Enhanced Security Configuration** option that is currently set to **On**.
 
 1. In the **Internet Explorer Enhanced Security Configuration** dialog box, perform the following steps:
 
@@ -310,7 +308,7 @@
 
 1. In the **Internet Explorer** download dialog box, click **Save**.
 
-	> **Note:** The download of the AllFiles executable typically takes around five minutes.
+	> **Note**: The download of the AllFiles executable typically takes around five minutes.
 
 1. Click the **Windows File Explorer** icon in your Taskbar.
 
@@ -386,7 +384,7 @@
 
 1. In the **Internet Explorer** download dialog box, click **Save**.
 
-	> **Note:** The download of the executable typically takes around two minutes.
+	> **Note**: The download of the executable typically takes around two minutes.
 
 1. Click the **Windows File Explorer** icon in your Taskbar.
 
@@ -416,6 +414,6 @@
 
 #### Task 6: Close Active Applications
 
-1. Close the currently running **Visual Studio Code** application.
+1. Close the currently running **Visual Studio** application.
 
 > **Results**: After completing this exercise, your development virtual machine will have your lab files installed. Your virtual machine will also have Visual Studio, Azure PowerShell, and the Azure SDK installed.

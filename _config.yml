@@ -1,11 +1,10 @@
-title: '20535: Architecting Microsoft Azure Solutions'
+title: '20532: Developing Microsoft Azure Solutions'
 remote_theme: azure-immersion/docs-jekyll-theme
 exclude:
   - readme.md
-  - CHANGELOG.md
   - .build/
   - .circleci/
-  - .guides/
+  - .github/
 header_pages:
   - index.html
 author: Microsoft Learning

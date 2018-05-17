@@ -4,7 +4,7 @@
 
 ## Exercise 1: Creating an Azure Web App and Function App
 
-#### Task 1: Create a Web App instance by using the Portal
+#### Task 1: Sign in to the Azure Portal
 
 1. On the Start screen, click the **Internet Explorer** tile.
 
@@ -17,6 +17,8 @@
 1. Click **Sign In**.
 
 	> **Note**: If this is your first time logging in to the Portal, you may be prompted with a “Welcome” dialog. You can safely close this dialog and continue.
+
+#### Task 2: Create a Web App instance by using the Portal
 
 1. In the navigation pane on the left side of the screen, click **Create a resource**.
 
@@ -34,8 +36,6 @@
 
 	a. In the **App name** dialog box, create a unique name for your website.
 	
-	a. In the **Subscription Group** section, select the subscription you wish to use.
-
 	a. In the **Resource Group** section, select the **Create new** option and then enter the value **MOD03WEBA** into the dialog box.
 
 	a. Select the **App Service plan** option.
@@ -58,7 +58,7 @@
 
 	a. In the **Database** blade, click the **Create a new database** option.
 
-	a. In the **SQL Database** blade, locate the **Name** box and provide the value **EventsContextDB**.
+	a. In the **SQL Database** blade, locate the **Name** field and provide the value **EventsContextDB**.
 
 	a. In the **SQL Database** blade, click the **Target server** option.
 
@@ -98,8 +98,6 @@
 
 	a. In the **App name** dialog box, create a unique name for your website.
 	
-	a. In the **Subscription Group** section, select the subscription you wish to use.
-
 	a. In the **Resource Group** section, select the **Use existing** option and then select the **MOD03WEBA** Resource Group from the list.
 
 	a. In the **OS** group, select the **Windows** option.
@@ -112,7 +110,7 @@
 
 	a. Click the **Create** button to create your Function App.
 
-#### Task 2: Go to the newly created Web App's placeholder page
+#### Task 3: Go to the newly created Web App's placeholder page
 
 > **Note**: Creating Apps within App Service is typically very fast, but you have to wait for the App to be created and running before you can go to the App's blade. When the App is running, its status displays as Running in the **App Service** list.
 
@@ -301,6 +299,10 @@
 	services.Configure<ApplicationSettings>(Configuration.GetSection(nameof(ApplicationSettings)));
 	```
 
+1. **Save** all open editor files.
+
+1. In the **Solution Explorer** pane, right-click the **Contoso.Events.Management** project, and then click **Set as Startup Project**.
+
 1. On the **Debug** menu, click **Start Debugging**.
 
 1. On the home page of the web application, verify that a list of five events displays under the **Events Administration** header.
@@ -457,13 +459,7 @@
     az group delete --help
     ```
 
-#### Task 2: Delete Resource Groups
-
-1. Type in the following command and press **Enter** to delete the **MOD03WEBA** *Resource Group*:
-
-    ```
-    az group delete --name MOD03WEBA --no-wait --yes
-    ```
+#### Task 2: Delete Resource Group
 
 1. Type in the following command and press **Enter** to delete the **MOD03WEBA** *Resource Group*:
 
@@ -477,6 +473,6 @@
 
 1. Close the currently running **Microsoft Edge** application.
 
-1. Close the currently running **Visual Studio Code** application.
+1. Close the currently running **Visual Studio** application.
 
 > **Review**: In this exercise, you "cleaned up your subscription" by removing the **Resource Groups** used in this lab.

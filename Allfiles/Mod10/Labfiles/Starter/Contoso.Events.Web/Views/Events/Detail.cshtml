@@ -1,0 +1,38 @@
+﻿@model EventDetailViewModel
+<article class="container py-5">
+    <div class="row py-2">
+        <div class="col-sm-8">
+            <h3 class="display-3">
+                @Model.Event.Title
+            </h3>
+            <p>
+                @Html.Raw(WebUtility.HtmlDecode(Model.Event.Description))
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <a class="btn btn-primary btn-lg center-block" asp-route="EventRegister" asp-route-key="@Model.Event.EventKey">
+                Register Now
+            </a>
+            <br />
+            <em>
+                @Model.Event.RegistrationCount
+                &nbsp;
+                Attending
+            </em>
+        </div>
+    </div>
+    <div class="row py-2">
+        <div class="col-sm-6">
+            <div class="alert alert-warning">
+                <h4>
+                    @Model.Event.StartTime.ToLongDateString()
+                </h4>
+                <p>
+                    @Model.Event.StartTime.ToString("hh:mm tt")
+                    &nbsp;-&nbsp;
+                    @Model.Event.EndTime.ToString("hh:mm tt")
+                </p>
+            </div>
+        </div>
+    </div>
+</article>

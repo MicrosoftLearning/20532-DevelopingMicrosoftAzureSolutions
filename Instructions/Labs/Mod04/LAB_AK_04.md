@@ -26,7 +26,7 @@
 
 1. At the top-left corner of the **Sql databases** blade, click the **Add** button.
 
-1. In the **SQL Database** blade that displays, locate the **Database name** box and provide the value **db20532**.
+1. In the **SQL Database** blade that displays, locate the **Database name** field and provide the value **db20532**.
 
 1. Locate the **Resource group** section, select the **Create new** option and then enter the value **MOD04SQLD** in the dialog box.
 
@@ -38,15 +38,15 @@
 
 	a. Click **Create a new server**.
 
-	a. In the **New Server** blade that displays, locate the **Server Name** box.
+	a. In the **New Server** blade that displays, locate the **Server Name** field.
 
-	a. In the **Server name** box, type **sv20532[*Your Name Here*]**.
+	a. In the **Server name** field, type **sv20532[*Your Name Here*]**.
 
-	a. In the **Server admin login** box, type **testuser** as login.
+	a. In the **Server admin login** field, type **testuser** as login.
 
-	a. In the **Password** box, type **TestPa$$w0rd** as password.
+	a. In the **Password** field, type **TestPa$$w0rd** as password.
 
-	a. In the **Confirm password** box, type **TestPa$$w0rd**.
+	a. In the **Confirm password** field, type **TestPa$$w0rd**.
 
 	a. In the **Location** list, select the region that is closest to your location.
 
@@ -147,7 +147,7 @@
 	eventItem.RegistrationCount = 1;
 	```
 
-1. Still within the *if* block, add the following line of code to add the new **Event** class instance to the **Events** property of type **DbSet<Event>**:
+1. Still within the *if* block, add the following line of code to add the new **Event** class instance to the **Events** property of type **DbSet\<Event\>**:
 
 	```
 	eventsContext.Events.Add(eventItem);
@@ -184,6 +184,8 @@
 
 #### Task 3: Validate Database Initialization
 
+1. In the **Solution Explorer** pane, right-click the **Contoso.Events.Web** project, and then click **Set as Startup Project**.
+
 1. On the **Debug** menu, click **Start Debugging**.
 
 1. On the home page of the web application, you will see that no events are shown.
@@ -202,7 +204,7 @@
 
 1. In the **Add Connection** wizard, provide following values and click **OK**.
 
-	a. In the **Server name** box, type **(localdb)\\mssqllocaldb**.
+	a. In the **Server name** field, type **(localdb)\\mssqllocaldb**.
 
 	a. In the **Authentication** list, select **Use Windows Authentication**.
 
@@ -376,6 +378,8 @@
 
 #### Task 6: Run the ASP.NET Web Application to View Events from the Local SQL Database
 
+1. In the **Solution Explorer** pane, right-click the **Contoso.Events.Web** project, and then click **Set as Startup Project**.
+
 1. On the **Debug** menu, click **Start Debugging**.
 
 1. On the home page of the web application, verify that it shows a list of multiple events.
@@ -482,13 +486,13 @@
 
 1. In the **Add Connection** wizard, provide following values and click **OK**.
 
-	a. In the **server name** box, type **sv20532\[your name\].database.windows.net**.
+	a. In the **server name** field, type **sv20532\[your name\].database.windows.net**.
 
 	a. Select **Use SQL Server Authentication**.
 
-	a. In the **Username** box, type **testuser**.
+	a. In the **Username** field, type **testuser**.
 
-	a. In the **Password** box, type **TestPa$$w0rd**.
+	a. In the **Password** field, type **TestPa$$w0rd**.
 
 	a. In the **Select or enter a database name** dropdown, select **db20532**.
 
@@ -530,13 +534,7 @@
     az group delete --help
     ```
 
-#### Task 2: Delete Resource Groups
-
-1. Type in the following command and press **Enter** to delete the **MOD04SQLD** *Resource Group*:
-
-    ```
-    az group delete --name MOD04SQLD --no-wait --yes
-    ```
+#### Task 2: Delete Resource Group
 
 1. Type in the following command and press **Enter** to delete the **MOD04SQLD** *Resource Group*:
 
@@ -550,6 +548,6 @@
 
 1. Close the currently running web browser application.
 
-1. Close the currently running **Visual Studio Code** application.
+1. Close the currently running **Visual Studio** application.
 
 > **Review**: In this exercise, you "cleaned up your subscription" by removing the **Resource Groups** used in this lab.

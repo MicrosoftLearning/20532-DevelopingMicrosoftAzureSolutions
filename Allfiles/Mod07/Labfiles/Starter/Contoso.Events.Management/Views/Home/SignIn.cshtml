@@ -1,0 +1,32 @@
+﻿@model SignInSheetViewModel
+<article class="container py-5">
+    <h1 class="display-1">
+        Sign-In Sheet Generation
+    </h1>
+    <h3 class="display-3">
+        @Model.Event.Title
+    </h3>
+    @if (@Model.SignInSheetState == SignInSheetState.SignInDocumentProcessing)
+    {
+        <div class="alert alert-info">
+            <h4>Sign-In Document Generation In Progress</h4>
+            <p>
+                Please
+                <a asp-route="SignIn" asp-route-id="@Model.Event.Id">Refresh</a>
+                the page to check status
+            </p>
+        </div>
+    }
+    else if (@Model.SignInSheetState == SignInSheetState.SignInDocumentAlreadyExists)
+    {
+        <div class="alert alert-warning">
+            <h4>Sign-In Document Already Exists</h4>
+            <p>
+                <a asp-route="SignInDownload" asp-route-blob="@Model.Event.SignInDocumentUrl" target="_blank">Download Sign-In Sheet Stream</a>
+            </p>
+            <p>
+                <a asp-route="SignInLink" asp-route-blob="@Model.Event.SignInDocumentUrl" target="_blank">Use Sign-In Sheet Hyperlink</a>
+            </p>
+        </div>
+    }
+</article>

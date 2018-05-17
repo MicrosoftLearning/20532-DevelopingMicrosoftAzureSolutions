@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "AzureWebJobsDashboard": "",
+    "EventsContextConnectionString": "",
+    "ServiceBusConnectionString": "",
+    "CosmosEndpointUrl": "",
+    "CosmosAuthorizationKey": "",
+    "CosmosDatabaseId": "EventsDatabase.Mod08",
+    "CosmosCollectionId": "RegistrationCollection"
+  }
+}

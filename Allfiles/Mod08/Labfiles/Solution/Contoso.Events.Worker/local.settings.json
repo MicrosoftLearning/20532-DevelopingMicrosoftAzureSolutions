@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true;",
+    "AzureWebJobsDashboard": "UseDevelopmentStorage=true;",
+    "EventsContextConnectionString": "Server=(localdb)\\mssqllocaldb;Database=Contoso.Events.Mod08;Trusted_Connection=True;MultipleActiveResultSets=true",
+    "ServiceBusConnectionString": "",
+    "CosmosEndpointUrl": "https://localhost:8081",
+    "CosmosAuthorizationKey": "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==",
+    "CosmosDatabaseId": "EventsDatabase.Mod08",
+    "CosmosCollectionId": "RegistrationCollection"
+  }
+}
