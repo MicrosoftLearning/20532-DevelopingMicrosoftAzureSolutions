@@ -1,4 +1,6 @@
-# Lab : Deploying Templated Environments Using the Cloud Shell
+# Module 10: DevOps in Azure
+
+# Lab: Deploying Templated Environments Using the Cloud Shell
 
 ## Exercise 1: Start the Cloud Shell
 
