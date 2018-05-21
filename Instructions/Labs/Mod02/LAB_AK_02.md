@@ -210,7 +210,7 @@
 
 1. In the **Windows Security** dialog box, perform the following steps:
 
-	a. Click the **More choices** located at the bottom of hte dialog box.
+	a. Click the **More choices** located at the bottom of the dialog box.
 	
 	a. Click **Use a different account** that appears.
 
@@ -254,9 +254,11 @@
 
 #### Task 2: Create an AllFiles Drive
 
-1. Locate and right click the start menu icon the the lower left area of the desktop.
+1. Locate and right-click the **Start Menu** located in the lower-left corner of the **Windows** desktop.
 
-1. Select **Disk Management**.
+	> **Note**: If you are unfamiliar with the latest Windows operating system environment, the **Start Menu** used the **Windows** icon.
+
+1. Select the **Disk Management** option.
 
 1. In the **Initialize Disk** dialog box, perform the following steps:
 
