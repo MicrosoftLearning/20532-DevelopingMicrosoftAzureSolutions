@@ -12,7 +12,7 @@
 
 1. Enter the email address of your Microsoft account.
 
-1. Click Continue.
+1. Click Next.
 
 1. Enter the password for your Microsoft account
 
@@ -65,11 +65,11 @@
 
 1. At the top-left corner of the screen, click **Create a resource**.
 
-1. In the **New** panel that displays, click the **See all** link next to the **Marketplace** header.
+1. In the **New** panel that displays, click the **See all** link next to the **Azure Marketplace** header.
 
-1. In the **Marketplace** blade that displays, click **Web + Mobile**.
+1. In the **Marketplace** blade that displays, click **Web**.
 
-1. In the **Web + Mobile** blade that displays, locate the search box at the top of the blade, type in the text **starter** and then press *Enter*.
+1. In the **Web** blade that displays, locate the search box at the top of the blade, type in the text **starter** and then press *Enter*.
 
 1. In the search **results**, locate and select the **ASP.NET Starter Web App** option.
 
