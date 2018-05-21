@@ -12,6 +12,8 @@
 
 1. In the email address box, type the email address of your Microsoft account.
 
+1. Click **Next**.
+
 1. In the password box, type the password for your Microsoft account.
 
 1. Click **Sign In**.
@@ -48,9 +50,11 @@
 
 	a. Select the **Pricing tier** option.
 
-	a. In the **Choose your pricing tier** blade, clocate and select the **Free** pricing tier.
+	a. In the new blade that appears, locate and select the **Dev / Test** tab.
 
-	a. Click the **Select** button.
+	a. Click the **F1** pricing tier.
+
+	a. Click the **Apply** button.
 
 	a. Back in the **App Service plan** blade, click the **OK** button.
 
@@ -148,10 +152,6 @@
 
 1. On the home page of the web application, verify that a list of two events displays under the **Events Administration** header.
 
-1. Click **Events** in the navigation bar at the top of the webpage.
-
-1. Verify that the Events page displays a list of events.
-
 1. Close the tab displaying the Web App.
 
 #### Task 2: Download the publish profile for the Azure Web App
@@ -187,10 +187,6 @@
 > **Note**: If you see the placeholder page that displayed in Exercise 1 - Task 2, it might mean that client-side caching is occurring. You can always force refresh your browser and cache by pressing Ctrl+F5.
 
 1. On the home page of the web application, verify that a list of two events displays under the **Events Administration** header.
-
-1. Click **Events** in the navigation bar at the top of the webpage.
-
-1. Verify that the **Events** page displays a list of events.
 
 1. Close the tab displaying the website.
 
@@ -228,7 +224,7 @@
 
 1. In the **Solution Explorer** pane, expand the **Controllers** folder and then double-click **HomeController.cs**.
 
-1. **Locate** the following code in line 15 of HomeController.cs:
+1. **Locate** the following code in line 16 of HomeController.cs:
 
 	```
 	public async Task<IActionResult> Index([FromServices] EventsContext eventsContext)
@@ -237,10 +233,10 @@
 1. **Replace** the line of code with the following code:
 
 	```
-	var events = await eventsContext.Events.OrderBy(e => e.StartTime).Take(2).ToListAsync<Event>();
+	public async Task<IActionResult> Index([FromServices] EventsContext eventsContext, [FromServices] IOptions<ApplicationSettings> settings)
 	```
 
-1. **Locate** the following code in line 17 of HomeController.cs:
+1. **Locate** the following code in line 18 of HomeController.cs:
 
 	```
 	var events = await eventsContext.Events.OrderBy(e => e.StartTime).Take(2).ToListAsync<Event>();
@@ -252,7 +248,7 @@
 	var events = await eventsContext.Events.OrderBy(e => e.StartTime).Take(settings.Value.LatestEventCount).ToListAsync<Event>();
 	```
 
-1. **Locate** the following code in line 22 of HomeController.cs:
+1. **Locate** the following code in line 23 of HomeController.cs:
 
 	```
 	LatestEventCount = 2
@@ -365,7 +361,7 @@
 
 1. In the **Add New Project** dialog, perform the following actions:
 
-	a. Expand the **Visual C# Items** option from the list of template categories.
+	a. Expand the **Visual C#** option from the list of template categories.
 
 	a. Select the **Cloud** option from the list of template categories.
 
@@ -377,7 +373,7 @@
 
 	a. Click the **OK** button. 
 
-1. In the **New Template** dialog, perform the following actions:
+1. In the **New Project - Contoso.Events.API** dialog, perform the following actions:
 
 	a. In the runtime list at the top of the dialog, select the **Azure Functions v2 (.NET Core)** runtime.
 
