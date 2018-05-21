@@ -136,7 +136,7 @@
 
 1. In the **Create Virtual Machine** blade, click **Size** and perform the following steps:
 
-	a. Locate the serach textbox on top of the blade and type *F4*.
+	a. Locate the search textbox on top of the blade and type *F4*.
 
 	a. Locate and select the **F4 Standard** option.
 
