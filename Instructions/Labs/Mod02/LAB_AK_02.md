@@ -198,7 +198,7 @@
 
 1. Click **Connect** at the top of the screen.
 
-1. In the **Connect to virtural machine** dialog that appears, click the **Download RDP File** Button.
+1. In the **Connect to virtual machine** dialog that appears, click the **Download RDP File** button.
 
 1. In the **Internet Explorer download** dialog box, click **Open**.
 
