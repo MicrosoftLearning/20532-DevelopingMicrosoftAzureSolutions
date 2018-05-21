@@ -10,7 +10,7 @@
 
 1. Go to *(<https://portal.azure.com>)*.
 
-1. Enter the email address of your Microsoft account. Click **Continue**.
+1. Enter the email address of your Microsoft account. Click **Next**.
 
 1. Enter the password for your Microsoft account.
 
@@ -136,7 +136,7 @@
 
 1. In the **Create Virtual Machine** blade, click **Size** and perform the following steps:
 
-	a. Locate and click the **View all** hyperlink.
+	a. Locate the serach textbox on top of the blade and type *F4*.
 
 	a. Locate and select the **F4 Standard** option.
 
@@ -198,6 +198,8 @@
 
 1. Click **Connect** at the top of the screen.
 
+1. In the **Connect to virtural machine** dialog that appears, click the **Download RDP File** Button.
+
 1. In the **Internet Explorer download** dialog box, click **Open**.
 
 1. In the **Remote Desktop Connection** dialog box, perform the following steps:
@@ -207,6 +209,10 @@
 	a. Click **Connect**.
 
 1. In the **Windows Security** dialog box, perform the following steps:
+
+	a. Click the **More choices** located at the bottom of hte dialog box.
+	
+	a. Click **Use a different account** that appears.
 
 	a. For the **User name** dialog box, provide the value, **Student**.
 
@@ -236,7 +242,7 @@
 
 1. In the navigation pane on the left side, click **Local Server**.
 
-1. In the **Properties** field, click the **IE Enhanced Security Configuration** option that is currently set to **On**.
+1. In the **Properties** field, click the **IE Enhanced Security Configuration** option that is currently set to **Off**.
 
 1. In the **Internet Explorer Enhanced Security Configuration** dialog box, perform the following steps:
 
@@ -248,11 +254,9 @@
 
 #### Task 2: Create an AllFiles Drive
 
-1. Press the ``Windows logo key + W`` to open **Universal Search – Settings**.
+1. Locate and right click the start menu icon the the lower left area of the desktop.
 
-1. In the **Search** dialog box, provide the value **disk**.
-
-1. Click **Create and format hard disk partitions**.
+1. Select **Disk Management**.
 
 1. In the **Initialize Disk** dialog box, perform the following steps:
 
