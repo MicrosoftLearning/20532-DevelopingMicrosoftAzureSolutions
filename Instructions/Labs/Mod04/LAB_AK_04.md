@@ -54,7 +54,7 @@
 
 1. Back in the **SQL database** blade, click the **Pricing Tier** option.
 
-1. In the **Resource Configuration & Pricing** blade that displays, select the **Basic** option.
+1. In the **Configure** blade that displays, select the **Basic** option.
 
 1. Click **Apply** to close the blade.
 
@@ -66,7 +66,7 @@
 
 1. In the navigation pane on the left side, scroll down, and then click **All services**.
 
-1. Scroll-down, locate and select the **All services** option.
+1. Scroll-down, locate and select the **SQL databases** option.
 
 1. In the list of **SQL Databases**, select the SQL database named **db20532**.
 
@@ -100,7 +100,7 @@
 
 1. On the **Debug** menu, click **Start Debugging**.
 
-1. On the home page of the web application, verify that it shows an empty home page.
+1. On the home page of the web application, verify that only 'Upcoming Events' show on the home page.
 
 1. Close the browser window that is displaying the website.
 
@@ -125,7 +125,7 @@
 1. Add the following block of code to create a conditional *if* block that only executes the code within the block if there are no events in the database:
 
 	```
-	a. (!await eventsContext.Events.AnyAsync())
+	if (!await eventsContext.Events.AnyAsync())
 	{
 	}
 	```
@@ -259,7 +259,7 @@
 	{
 		await eventsContext.Database.EnsureCreatedAsync();
 
-		a. (!await eventsContext.Events.AnyAsync())
+		if (!await eventsContext.Events.AnyAsync())
 		{
 			await eventsContext.Events.AddRangeAsync(
 				new List<Event>() 
@@ -281,6 +281,8 @@
 #### Task 5: Write Entity Framework Queries in the ASP.NET MVC Controllers
 
 1. In the **Solution Explorer** pane of the Contoso.Events - Microsoft Visual Studio window, expand the **Contoso.Events.Web** project.
+
+1. In the **Solution Explorer** pane, expand the **Controllers** folder.
 
 1. In the **Solution Explorer** pane, double-click **HomeController.cs**.
 
@@ -305,9 +307,7 @@
 		.Take(appSettings.Value.LatestEventCount);
 	```
 
-1. In the **Solution Explorer** pane of the Contoso.Events - Microsoft Visual Studio window, expand the **Contoso.Events.Web** project.
-
-1. In the **Solution Explorer** pane, double-click **HomeController.cs**.
+1. In the **Solution Explorer** pane, double-click **EventsController.cs**.
 
 1. Locate the **Index** method:
 
@@ -337,12 +337,12 @@
 
 	```
 	EventsGridViewModel viewModel = new EventsGridViewModel
-	{
-		CurrentPage = currentPage,
-		PageSize = pageSize,
-		TotalRows = totalRows,
-		Events = pagedEvents
-	};	
+    {
+        CurrentPage = 0,
+        PageSize = 0,
+        TotalRows = 0,
+        Events = pagedEvents
+    };	
 	```
 
 1. Replace that block of code with the following block of code to set various properties of the **EventsGridViewModel** class instance:
@@ -408,6 +408,8 @@
 
 1. In the **Add New Item** dialog, perform the following actions:
 
+	a. Expand the **ASP.NET Core** category.
+
 	a. Select the **Data** option from the list of template categories.
 
 	a. Select the **JSON File** option from the list of templates.
@@ -464,9 +466,9 @@
 
 #### Task 3: Verify that the Azure Web App website is using the new data
 
-1. Wait for the publish process to complete and the console window to display the message **Complete**.
+1. Wait for the publish process to complete and the console window to display the message **Publish Succeeded**.
 
-	> **Note**: The publish process is complete when the message “**Complete”** displays in the **Web Publish Activity** history console. The green circular indicator in the Activity Log does not indicate that the publish process is complete, but it indicates that the package is uploaded successfully.
+	> **Note**: The publish process is complete when the message “**Publish Succeeded”** displays in the **Web Publish Activity** history console. The green circular indicator in the Activity Log does not indicate that the publish process is complete, but it indicates that the package is uploaded successfully.
 
 1. A browser tab will open automatically displaying the deployed web application.
 
@@ -481,8 +483,6 @@
 1. **Expand** the **Data Connections** node.
 
 1. Right click on **Data Connections** and click on **Add Connection**.
-
-1. Choose **Microsoft SQL Server** for data source and click **Continue**.
 
 1. In the **Add Connection** wizard, provide following values and click **OK**.
 
