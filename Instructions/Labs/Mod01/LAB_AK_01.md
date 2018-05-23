@@ -89,7 +89,7 @@
 
 ### Exercise 3: Exploring the Azure Cloud Shell
 
-#### Task 1: Opening the Cloud Shell
+#### Task 1: Open the Cloud Shell
 
 1. At the top of the portal, click the **Cloud Shell** icon to open a new shell instance.
 
