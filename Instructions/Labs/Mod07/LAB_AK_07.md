@@ -12,6 +12,8 @@
 
 1. In the email address box, type the email address of your Microsoft account.
 
+1. Click **Next**.
+
 1. In the password box, type the password for your Microsoft account.
 
 1. Click **Sign In**.
@@ -30,7 +32,7 @@
 
 1. In the **Create storage account** blade that displays, perform the following steps:
 
-	a. In the **Name** field, provide the value **stor20532[your name in lowercase here]**.
+	a. In the **Name** field, provide the value **star20532[your name in lowercase here]**.
 
 	a. In the **Deployment model** section, ensure that the *Resource manager* option is selected.
 
@@ -60,7 +62,7 @@
 
 1. In the **All services** blade that displays, click **Storage Accounts**.
 
-1. In the **Storage accounts** blade that displays, select the Storage account instance that has a prefix of **stor20532**.
+1. In the **Storage accounts** blade that displays, select the Storage account instance that has a prefix of **star20532**.
 
 1. In the *Storage account* blade, locate the **Settings** section on the left-side of the blade and click the **Access keys** link. 
 
@@ -128,7 +130,7 @@
 
 1. In the **SQL servers** blade that displays, select the SQL database instance that has a prefix of **sv20532**.
 
-1. In the *SQL server* blade, locate the **Settings** section on the left-side of the blade and click the **Firewalls and virtual networks** link.
+1. In the *SQL server* blade, locate the **Security** section on the left-side of the blade and click the **Firewalls and virtual networks** link.
 
 1. In the **Firewalls and virtual networks** pane, click the **Add client IP** button to add your virtual machine's IP Address to the list of allowed IP Address ranges.
 
@@ -324,8 +326,7 @@
     ```
     using (MemoryStream stream = await ProcessStorageMessage(eventKey))
     {
-        var byteArray = stream.ToArray();
-        await output.WriteAsync(byteArray, 0, byteArray.Length);
+
     }
     ```
 
@@ -338,7 +339,6 @@
 1. Still within the *using* block, add another line of code to invoke the **WriteAsync** method of the **output** variable passing in various metadata related to the **byteArray** variable:
 
     ```
-    byte[] byteArray = stream.ToArray();
     await output.WriteAsync(byteArray, 0, byteArray.Length);
     ```
 
@@ -455,6 +455,8 @@
 
 1. In the email address box, type the email address of your Microsoft account.
 
+1. Click **Next**.
+
 1. In the password box, type the password for your Microsoft account.
 
 1. Click **Sign In**.
@@ -465,7 +467,7 @@
 
 1. In the **All services** blade that displays, click **Storage accounts**.
 
-1. In the **Storage accounts** blade that displays, select the Azure Cosmos DB account instance that has a prefix of **stor20532**.
+1. In the **Storage accounts** blade that displays, select the Azure Cosmos DB account instance that has a prefix of **star20532**.
 
 1. In the *Storage account* blade, click the **Blobs** link.
 

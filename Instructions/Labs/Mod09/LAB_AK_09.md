@@ -72,6 +72,8 @@
 
 1. In the email address dialog box, type the email address of your Microsoft account.
 
+1. Click **Next**.
+
 1. In the password dialog box, type the password for your Microsoft account.
 
 1. Click **Sign In**.
@@ -185,6 +187,8 @@
 1. In the **Sign in to your account** dialog box, perform the following steps:
 
     a. Enter the email address of your Microsoft account.
+
+    a. Click **Next**.
 
     a. Enter the password for your Microsoft account.
 
