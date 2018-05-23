@@ -12,6 +12,8 @@
 
 1. In the email address box, type the email address of your Microsoft account.
 
+1. Click **Next**.
+
 1. In the password box, type the password for your Microsoft account.
 
 1. Click **Sign In**.
@@ -208,7 +210,7 @@
 
     a. Leave the **Subscription** field set to it's default value.
 
-    a. In the **Resource group** section, select the **Use Existing** option.
+    a. In the **Resource group** section, select the **Create New** option.
 
     a. In the **Resource group** section, locate the list and select the value **MOD10ARMG** option.
 
