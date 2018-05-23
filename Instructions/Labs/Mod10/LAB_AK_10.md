@@ -78,13 +78,13 @@
     az sql db create --name ContosoDB --server srvr20532[Your Name Here] --resource-group MOD10MNUL --edition Basic
     ```
 
-1. Once the **SQL Database** is created, type the following command into the shell and press Enter to view your **Connection String**. Record this value as you will need to use it later in this lab.  Be sure to replace the placeholder values for ``<username>`` and ``<password>`` with the values **testuser** and **TestPa$$word** respectively.
+1. Once the **SQL Database** is created, type the following command into the shell and press Enter to view your **Connection String**. Record this value as you will need to use it later in this lab.  Be sure to replace the placeholder values for ``<username>`` and ``<password>`` with the values **testuser** and **TestPa$$w0rd** respectively.
 
     ```
     az sql db show-connection-string --name ContosoDB --server srvr20532[Your Name Here] --client ado.net --output tsv
     ```
 
-	> **Note**: For example, if your copied connection string is ``Server=tcp:sv20532microsoft.database.windows.net,1433;Initial Catalog=db20532;Persist Security Info=False;User ID=<username>;Password=<password>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;``, your updated connection string would be ``Server=tcp:sv20532microsoft.database.windows.net,1433;Initial Catalog=db20532;Persist Security Info=False;User ID=testuser;Password=TestPa$$word;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;``:
+	> **Note**: For example, if your copied connection string is ``Server=tcp:sv20532microsoft.database.windows.net,1433;Initial Catalog=db20532;Persist Security Info=False;User ID=<username>;Password=<password>;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;``, your updated connection string would be ``Server=tcp:sv20532microsoft.database.windows.net,1433;Initial Catalog=db20532;Persist Security Info=False;User ID=testuser;Password=TestPa$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;``:
 
 1. To create a new **App Service Plan** in the resource group, type the following command into the shell and press Enter:
 

@@ -12,6 +12,8 @@
 
 1. In the email address box, type the email address of your Microsoft account.
 
+1. Click **Next**.
+
 1. In the password box, type the password for your Microsoft account.
 
 1. Click **Sign In**.
@@ -30,7 +32,7 @@
 
 1. In the **Create storage account** blade that displays, perform the following steps:
 
-	a. In the **Name** field, provide the value **stor20532[your name in lowercase here]**.
+	a. In the **Name** field, provide the value **star20532[your name in lowercase here]**.
 
 	a. In the **Deployment model** section, ensure that the *Resource manager* option is selected.
 
@@ -60,11 +62,11 @@
 
 1. In the **All services** blade that displays, click **Storage Accounts**.
 
-1. In the **Storage accounts** blade that displays, select the Storage account instance that has a prefix of **stor20532**.
+1. In the **Storage accounts** blade that displays, select the Storage account instance that has a prefix of **star20532**.
 
 1. In the *Storage account* blade, locate the **Settings** section on the left-side of the blade and click the **Access keys** link. 
 
-1. In the **Keys** pane, select any one of the keys and record the value in the **Connection string** field. You will use this value later in this lab.
+1. In the **Access keys** blade, select any one of the keys and record the value in the **Connection string** field. You will use this value later in this lab.
 
 #### Task 3: Create an Azure SQL Database Instance
 
@@ -120,9 +122,9 @@
 
 1. In the *SQL database* blade, locate the **Settings** section on the left-side of the blade and click the **Connection strings** link.
 
-1. In the **Connection strings** pane, copy the value of the **ADO.NET** connection string. Be sure to replace the placeholder values for ``{your_username}`` and ``{your_password}`` with the values **testuser** and **TestPa$$word** respectively.
+1. In the **Connection strings** pane, copy the value of the **ADO.NET** connection string. Be sure to replace the placeholder values for ``{your_username}`` and ``{your_password}`` with the values **testuser** and **TestPa$$w0rd** respectively.
 
-	> **Note**: For example, if your copied connection string is ``Server=tcp:sv20532microsoft.database.windows.net,1433;Initial Catalog=db20532;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;``, your updated connection string would be ``Server=tcp:sv20532microsoft.database.windows.net,1433;Initial Catalog=db20532;Persist Security Info=False;User ID=testuser;Password=TestPa$$word;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;``
+	> **Note**: For example, if your copied connection string is ``Server=tcp:sv20532microsoft.database.windows.net,1433;Initial Catalog=db20532;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;``, your updated connection string would be ``Server=tcp:sv20532microsoft.database.windows.net,1433;Initial Catalog=db20532;Persist Security Info=False;User ID=testuser;Password=TestPa$$w0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;``
 
 1. In the navigation pane on the left side of the Azure Portal, click **All services**.
 
@@ -130,7 +132,7 @@
 
 1. In the **SQL servers** blade that displays, select the SQL database instance that has a prefix of **sv20532**.
 
-1. In the *SQL server* blade, locate the **Settings** section on the left-side of the blade and click the **Firewalls and virtual networks** link.
+1. In the *SQL server* blade, locate the **Security** section on the left-side of the blade and click the **Firewalls and virtual networks** link.
 
 1. In the **Firewalls and virtual networks** pane, click the **Add client IP** button to add your virtual machine's IP Address to the list of allowed IP Address ranges.
 
@@ -208,7 +210,7 @@
 
 	```
 	"CosmosSettings": {
-		"DatabaseId": "EventsDatabase",
+		"DatabaseId": "EventsDatabase.Mod06",
 		"CollectionId": "RegistrationCollection",
 		"EndpointUrl": "",
 		"AuthorizationKey": ""
@@ -221,7 +223,7 @@
 
 	```
 	"CosmosSettings": {
-		"DatabaseId": "EventsDatabase",
+		"DatabaseId": "EventsDatabase.Mod06",
 		"CollectionId": "RegistrationCollection",
 		"EndpointUrl": "",
 		"AuthorizationKey": ""
@@ -332,19 +334,19 @@
 	public class RegistrationContext
 	```
 
-1. Within the **ProcessDocuments** class, add a new line of code to create a new property of type **Database**:
+1. Within the **RegistrationContext** class, add a new line of code to create a new property of type **Database**:
 
 	```
 	protected Database Database { get; set; }
 	```
 
-1. Within the **ProcessDocuments** class, add a new line of code to create a new property of type **DocumentCollection**:
+1. Within the **RegistrationContext** class, add a new line of code to create a new property of type **DocumentCollection**:
 
 	```
 	protected DocumentCollection Collection { get; set; }
 	```
 
-1. Within the **ProcessDocuments** class, add a new line of code to create a new property of type **DocumentClient**:
+1. Within the **RegistrationContext** class, add a new line of code to create a new property of type **DocumentClient**:
 
 	```
 	protected DocumentClient Client { get; set; }
@@ -487,7 +489,7 @@
 
 	```
 	ResourceResponse<Document> response = await Client.CreateDocumentAsync(Collection.SelfLink, registration);
-	``
+	```
 
 1. Add another line of code to use dot notation to access the **Resource** property (of type **Document**) of the **response** variable and the **Id** property of the **Document** instance. Return the string **Id** value as the result of the current method:
 
