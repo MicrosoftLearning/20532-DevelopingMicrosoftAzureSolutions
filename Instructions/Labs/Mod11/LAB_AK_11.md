@@ -114,7 +114,7 @@
 
     a. Leave the **Subscription** field set to it's default value.
 
-    a. In the **Resource group** section, select the **Use Existing** option.
+    a. In the **Resource group** section, select the **Create new** option.
 
     a. In the **Resource group** section, locate the list and select the value **MOD11AZAD** option.
 
@@ -132,9 +132,9 @@
 
 1. In the **All services** blade that displays, click **Resource groups**.
 
-1. In the **Resource groups** blade that displays, click the **MOD10ARMG** resource group.
+1. In the **Resource groups** blade that displays, click the **MOD11AZAD** resource group.
 
-1. In the **MOD10ARMG** blade, locate and click the **Web App** resource that has a prefix of **webm**.
+1. In the **MOD11AZAD** blade, locate and click the **Web App** resource that has a prefix of **webm**.
 
     > **Note**: There is another **Web App** instance with a prefix of **webp** and a **Function App** instance with a prefix of **func**.
 
@@ -160,7 +160,7 @@
 
     a. In the second **Management mode** section that appears, select the **Create New AD App** option.
 
-    a. In the **Create App** field, enter the value **contosoeventsmanagementauth**.
+    a. In the **Create App** field, enter the value **contosoevents[Your Name Here]**.
 
     a. In the **Grant Common Data Services Permissions** section, select the **On** option.
 
@@ -182,7 +182,7 @@
 
 1. Click **Sign In**.
 
-    > **Note**: You will now see a prompt asking if you authorize the **contosoeventsmanagementauth** application in Azure Active Directory to have specific permissions on your behalf.
+    > **Note**: You will now see a prompt asking if you authorize the **contosoevents[Your Name Here]** application in Azure Active Directory to have specific permissions on your behalf.
 
 1. Click the **Accept** button.
 
