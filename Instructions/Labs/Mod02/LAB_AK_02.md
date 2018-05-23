@@ -418,8 +418,6 @@
 
 1. Click the **Finish** button to close the installer.
 
-#### Task 6: Close Active Applications
-
 1. Close the currently running **Visual Studio** application.
 
 > **Results**: After completing this exercise, your development virtual machine will have your lab files installed. Your virtual machine will also have Visual Studio, Azure PowerShell, and the Azure SDK installed.
