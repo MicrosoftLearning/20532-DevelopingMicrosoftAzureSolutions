@@ -4,15 +4,15 @@
     "parameters": {
         "webAppPublicPackageUri": {
             "type": "string",
-            "defaultValue": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/master/Allfiles/Mod11/Labfiles/Contoso.Events.Web.zip"
+            "defaultValue": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/master/Allfiles/Mod11/Labfiles/Starter/Contoso.Events.Web.zip"
         },
         "webAppManagementPackageUri": {
             "type": "string",
-            "defaultValue": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/master/Allfiles/Mod11/Labfiles/Contoso.Events.Management.zip"
+            "defaultValue": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/master/Allfiles/Mod11/Labfiles/Starter/Contoso.Events.Management.zip"
         },
         "functionAppZipUri": {
             "type": "string",
-            "defaultValue": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/master/Allfiles/Mod11/Labfiles/Contoso.Events.Worker.zip"
+            "defaultValue": "https://github.com/MicrosoftLearning/20532-DevelopingMicrosoftAzureSolutions/raw/master/Allfiles/Mod11/Labfiles/Starter/Contoso.Events.Worker.zip"
         }
     },
     "variables": {
