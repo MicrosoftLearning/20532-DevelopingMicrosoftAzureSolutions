@@ -210,7 +210,7 @@
 
     a. Leave the **Subscription** field set to it's default value.
 
-    a. In the **Resource group** section, select the **Create New** option.
+    a. In the **Resource group** section, select the **Use existing** option.
 
     a. In the **Resource group** section, locate the list and select the value **MOD10ARMG** option.
 
