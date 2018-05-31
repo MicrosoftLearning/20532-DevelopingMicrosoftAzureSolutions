@@ -535,7 +535,7 @@
 1. Add a new line of code to return the **blobStream** variable with the streamed data from your blob as the result of the method:
 
     ```
-	return blobStream;
+	return new DownloadPayload { Stream = blobStream, ContentType = blob.Properties.ContentType };
     ```
 
 #### Task 2: Validate Sign-In Sheet Download
