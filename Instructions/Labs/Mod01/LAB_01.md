@@ -92,11 +92,11 @@ The main tasks for this exercise are as follows:
 
 1. Open the **New** panel, and then navigate to the **Marketplace**.
 
-1. In the **Marketplace** blade, select the **Web + Mobile** group, and then create a new instance using the **ASP.NET Starter Web App** template.
+1. In the **Marketplace** blade, select the **Web** group, and then create a new instance using the **Web App** template.
 
-1. In the **ASP.NET Starter Web App** journey, view the journey part for creating a new **App Service Plan**.
+1. In the **Web App** journey, view the journey part for creating a new **App Service Plan**.
 
-1. Close the **ASP.NET Starter Web App** blade to view the warning message that notifies you about losing the changes you made in the journey or a journey part.
+1. Close the **Web App** blade to view the warning message that notifies you about losing the changes you made in the journey or a journey part.
 
 > **Results**: After completing this exercise, you will have viewed blades, journeys, and journey parts.
 
