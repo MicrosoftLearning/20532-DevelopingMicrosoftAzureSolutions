@@ -70,7 +70,7 @@ namespace Contoso.Events.Web.Controllers
         [Route("{id}/download/{blob}", Name = "SignInDownload")]
         public async Task<ActionResult> DownloadSignIn([FromServices] BlobContext blobContext, string id, string blob)
         {
-            string blobName = $"{blob}.docx";
+            string blobName = $"{blob}";
             DownloadPayload blobData = await blobContext.GetStreamAsync(blobName);
 
             return File(blobData.Stream, blobData.ContentType, blobName);
@@ -80,7 +80,7 @@ namespace Contoso.Events.Web.Controllers
         [Route("{id}/link/{blob}", Name = "SignInLink")]
         public async Task<ActionResult> GetSignInUrl([FromServices] BlobContext blobContext, string id, string blob)
         {
-            string blobName = $"{blob}.docx";
+            string blobName = $"{blob}";
             string blobUrl = await blobContext.GetSecureUrlAsync(blobName);
 
             return Redirect(blobUrl);
