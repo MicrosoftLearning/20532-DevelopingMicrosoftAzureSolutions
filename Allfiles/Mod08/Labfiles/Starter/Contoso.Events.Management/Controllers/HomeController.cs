@@ -31,7 +31,7 @@ namespace Contoso.Events.Web.Controllers
 
         [HttpGet]
         [Route("{id}", Name = "SignIn")]
-        public async Task<IActionResult> SignIn([FromServices] EventsContext eventsContext, [FromServices] QueueContext queueContext, int id)
+        public async Task<IActionResult> SignIn([FromServices] EventsContext eventsContext, [FromServices] IQueueContext queueContext, int id)
         {
             var eventItem = await eventsContext.Events.SingleOrDefaultAsync(e => e.Id == id);
 

@@ -166,7 +166,7 @@
 	{
 		await eventsContext.Database.EnsureCreatedAsync();
 
-		a. (!await eventsContext.Events.AnyAsync())
+		if (!await eventsContext.Events.AnyAsync())
 		{
 			Event eventItem = new Event();
 			eventItem.EventKey = "FY17SepGeneralConference";
