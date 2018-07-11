@@ -1,38 +1,44 @@
- # Module 9: Automating Integration with Azure Resources
+# Module 9: Automating Integration with Azure Resources
 
 # Lab: Automating the Creation of Azure Assets using PowerShell and the Azure CLI
 
 ### Scenario
 
-Insert scenario here
+Now that you have created many of the resources that you will use in your Azure application, you have decided to automate the creation of your assets in Azure. Some of your administrators are Windows experts and would prefer to automate using PowerShell while others use Linux and would prefer to automate from the command line. Due to this requirement, you will try and implement automation using PowerShell and separately using a cross-platform CLI interface.
 
 ### Objectives
 
 After you complete this lab, you will be able to:
 
-- Task 1
+- Use Azure CLI to Create and Manage an Azure Web App
 
-- Task 2
-
-- Task 3
+- Use PowerShell to Create and Manage an Azure Storage Account
 
 ### Lab Setup
 
 - *Estimated Time*: 90 minutes
 
-For this lab, you will use the available host machine. Before you begin this lab, you must complete the following steps:
+Before starting this lab, you must complete the lab in Module 2. For the lab in this module, you will use the available host machine. Also, you must complete the following steps:
 
-1. Setup 1
+1.  On the host computer, click **Start**, type **Remote**, and then click **Remote Desktop Connection**.
+
+1.  In Remote Desktop Connection, provide the name of your virtual machine in the **Computer** box by using the following format:
+
+    -   **[Your VM IP Address]:[*Your VM RDP Port*]**
+
+    > **Note:** The name and port for your virtual machine might be saved in the Computer drop-down list. If this is the case, use this value instead of typing it in manually. If you are unsure about your virtual machine’s RDP port, use either of the Azure portals to find your virtual machine’s endpoints. The endpoint with the name **Remote Desktop** is the correct port for RDP. This port is randomized to protect your virtual machine from unauthorized access.
+
+1.  In Remote Desktop Connection, click **Connect**. Wait until the RDP client accesses the virtual machine.
+
+1.  If necessary, sign in by using the following credentials:
+
+    -   User name: **Student**
+
+    -   Password: **AzurePa$$w0rd**
+
+1.  Verify that you received the credentials to sign in to the Azure portal from your training provider. You will use these credentials and the Azure account throughout the labs in this course.
 
 ## Exercise 1: Use Azure CLI to Create and Manage an Azure Web App
-
-### Scenario
-
-Insert Scenario here
-
-The main tasks for this exercise are as follows:
-
-1. 
 
 #### Task 1: Preparing the Azure CLI Environment
 

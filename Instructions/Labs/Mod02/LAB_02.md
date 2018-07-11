@@ -30,18 +30,6 @@ For this lab, you will use the available host machine. Before you begin this lab
 
 ## Exercise 1: Creating a Network and Resource Container
 
-### Scenario
-
-You want to create a virtual network that you can use for your new virtual machine. As part of creating the virtual network, you will also create a resource group.
-
-The main tasks for this exercise are as follows:
-
-1. Sign in to the Azure Portal.
-
-1. Create a Resource Group.
-
-1. Create a Virtual Network
-
 #### Task 1: Sign in to the Azure Portal
 
 1. Sign in to the Azure Portal (<https://portal.azure.com>).
@@ -75,16 +63,6 @@ The main tasks for this exercise are as follows:
 > **Results**: After completing this exercise, you will have a new virtual network and resource group in Azure.
 
 ## Exercise 2: Creating a Development Virtual Machine
-
-### Scenario
-
-You need a new storage account that you will use while creating your virtual machine. This storage account will contain the VHDs for the virtual machine that you will create.
-
-The main tasks for this exercise are as follows:
-
-1. Create a Storage Account.
-
-1. Create a Virtual Machine.
 
 #### Task 1: Create a Storage Account
 
@@ -153,18 +131,6 @@ The main tasks for this exercise are as follows:
 > **Results**: After completing this exercise, you will have a new virtual machine stored in a new storage account.
 
 ## Exercise 3:	Configuring the Virtual Machine for Development
-
-### Scenario
-
-Now that you have a new virtual machine, you need to configure Internet Explorer's Enhanced Security Configuration option. You also need to ensure that your working files are on the machine and ready.
-
-The main tasks for this exercise are as follows:
-
-1. Disable Internet Explorer Enhanced Security Configuration
-
-1. Create an AllFiles drive and extract the AllFiles Content to it.
-
-1. Authenticate to Visual Studio using the Microsoft Account associated with your Azure subscription.
 
 #### Task 1: Disable IE Enhanced Security Configuration
 

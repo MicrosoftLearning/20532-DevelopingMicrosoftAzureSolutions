@@ -32,13 +32,6 @@ For this lab, you will use the available host machine. Before you begin this lab
 
 ## Exercise 1: Signing in to the Azure Portal
 
-### Scenario
-
-You will start by signing in to the Azure Portal by using the new portal URL.
-The main tasks for this exercise are as follows:
-
-1. Sign in to the Azure Portal.
-
 #### Task 1: Sign in to the Azure Portal
 
 1. Sign in to the Azure Portal (https://portal.azure.com).
@@ -48,18 +41,6 @@ The main tasks for this exercise are as follows:
 > **Results**: After completing this exercise, you will have signed in to the Azure Portal.
 
 ## Exercise 2: Customizing the Azure Portal
-
-### Scenario
-
-You want to practice customizing the Dashboard based on the needs of your team. You also want to walk through a journey.
-
-The main tasks for this exercise are as follows:
-
-1. Customize the Dashboard.
-
-1. View a blade.
-
-1. Begin a journey.
 
 #### Task 1: Customize the Dashboard
 
@@ -101,15 +82,6 @@ The main tasks for this exercise are as follows:
 > **Results**: After completing this exercise, you will have viewed blades, journeys, and journey parts.
 
 ### Exercise 3: Exploring the Azure Cloud Shell
-
-### Scenario
-
-You will start by signing in to the Azure Portal by using the new portal URL.
-The main tasks for this exercise are as follows:
-
-1. Open the Cloud Shell
-
-1. Test Cloud Shell
 
 #### Task 1: Open the Cloud Shell
 

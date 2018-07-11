@@ -4,37 +4,43 @@
 
 ### Scenario
 
-Insert scenario here
+Currently, your on-premises Contoso Events application uses a WCF service to list the hotels that are near a location. You would like to continue to use the WCF service, but you cannot modify your company’s firewall. You also would not like to expose the true network location of the WCF service. You have decided to use Service Bus relays so that you have a common endpoint that you can provide to client applications. You will start by using that endpoint in your Contoso Events web application.
 
 ### Objectives
 
 After you complete this lab, you will be able to:
 
-- Task 1
+- Create an Azure Service Bus Namespace
 
-- Task 2
+- Create an Azure Storage Queue Instance
 
-- Task 3
+- Access Azure Storage Queues and Azure Service Bus using .NET
 
 ### Lab Setup
 
 - *Estimated Time*: 90 minutes
 
-For this lab, you will use the available host machine. Before you begin this lab, you must complete the following steps:
+Before starting this lab, you must complete the lab in Module 2. For the lab in this module, you will use the available host machine. Also, you must complete the following steps:
 
-1. Setup 1
+1.  On the host computer, click **Start**, type **Remote**, and then click **Remote Desktop Connection**.
 
-## Exercise 1: Creating an Azure Service Bus Namespace
+1.  In Remote Desktop Connection, provide the name of your virtual machine in the **Computer** box by using the following format:
 
-### Scenario
+    -   **[Your VM IP Address]:[*Your VM RDP Port*]**
 
-Insert Scenario here
+    > **Note:** The name and port for your virtual machine might be saved in the Computer drop-down list. If this is the case, use this value instead of typing it in manually. If you are unsure about your virtual machine’s RDP port, use either of the Azure portals to find your virtual machine’s endpoints. The endpoint with the name **Remote Desktop** is the correct port for RDP. This port is randomized to protect your virtual machine from unauthorized access.
 
-The main tasks for this exercise are as follows:
+1.  In Remote Desktop Connection, click **Connect**. Wait until the RDP client accesses the virtual machine.
 
-1. Sign in to the Azure Portal.
+1.  If necessary, sign in by using the following credentials:
 
-1. 
+    -   User name: **Student**
+
+    -   Password: **AzurePa$$w0rd**
+
+1.  Verify that you received the credentials to sign in to the Azure portal from your training provider. You will use these credentials and the Azure account throughout the labs in this course.
+
+## Exercise 1: Creating an Azure Service Bus Namespace 
 
 #### Task 1: Sign in to the Azure Portal
 

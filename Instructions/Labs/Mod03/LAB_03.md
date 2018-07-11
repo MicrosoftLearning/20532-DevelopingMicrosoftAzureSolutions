@@ -4,37 +4,45 @@
 
 ### Scenario
 
-Insert scenario here
+You have an events administration application that is currently used by a static set of users. The application must be upgraded to handle all the users in your organization in the future. You need a hosting option that provides the least amount of friction so that you can immediately deploy the web application for immediate use. You also need the hosting option to be flexible enough so that it allows you to configure and scale the web application, thereby ensuring that it can handle an increase in the number of administrative users. For these reasons, you have chosen to deploy the application to Web Apps. Web Apps will also give you the flexibility to integrate your application with Azure Active Directory in the future so that all of your organization’s users can access the application.
+
+In this lab, you will create a Web App, deploy your existing application, and then configure the Web App after deployment.
 
 ### Objectives
 
 After you complete this lab, you will be able to:
 
-- Task 1
+- Deploy an ASP.NET Web Application to an Azure Web App
 
-- Task 2
+- Configure an Azure Web App
 
-- Task 3
+- Deploy a Console Application to an Azure Function App
 
 ### Lab Setup
 
 - *Estimated Time*: 90 minutes
 
-For this lab, you will use the available host machine. Before you begin this lab, you must complete the following steps:
+Before starting this lab, you must complete the lab in Module 2. For the lab in this module, you will use the available host machine. Also, you must complete the following steps:
 
-1. Setup 1
+1.  On the host computer, click **Start**, type **Remote**, and then click **Remote Desktop Connection**.
+
+1.  In Remote Desktop Connection, provide the name of your virtual machine in the **Computer** box by using the following format:
+
+    -   **[Your VM IP Address]:[*Your VM RDP Port*]**
+
+    > **Note:** The name and port for your virtual machine might be saved in the Computer drop-down list. If this is the case, use this value instead of typing it in manually. If you are unsure about your virtual machine’s RDP port, use either of the Azure portals to find your virtual machine’s endpoints. The endpoint with the name **Remote Desktop** is the correct port for RDP. This port is randomized to protect your virtual machine from unauthorized access.
+
+1.  In Remote Desktop Connection, click **Connect**. Wait until the RDP client accesses the virtual machine.
+
+1.  If necessary, sign in by using the following credentials:
+
+    -   User name: **Student**
+
+    -   Password: **AzurePa$$w0rd**
+
+1.  Verify that you received the credentials to sign in to the Azure portal from your training provider. You will use these credentials and the Azure account throughout the labs in this course.
 
 ## Exercise 1: Creating an Azure Web App and Function App
-
-### Scenario
-
-Insert Scenario here
-
-The main tasks for this exercise are as follows:
-
-1. Sign in to the Azure Portal.
-
-1. Create a Web App.
 
 #### Task 1: Sign in to the Azure Portal
 
@@ -96,16 +104,6 @@ The main tasks for this exercise are as follows:
 
 ## Exercise 2: Deploying an ASP.NET Web Application to an Azure Web App
 
-### Scenario
-
-Insert Scenario here
-
-The main tasks for this exercise are as follows:
-
-1. Download publish profile for web app
-
-1. Publish the web appliction project with the publish profile.
-
 #### Task 1: Open an existing ASP.NET web application project with Visual Studio 2017
 
 1. Go to **Allfiles (F):\Mod03\Labfiles\Starter** and run **Contoso.Events.sln**.
@@ -131,16 +129,6 @@ The main tasks for this exercise are as follows:
 1. On the home page of the web application, verify that a list of two events displays under the Events Administration header.
 
 ## Exercise 3: Configuring an Azure Web App
-
-### Scenario
-
-Insert Scenario here
-
-The main tasks for this exercise are as follows:
-
-1. 
-
-1. 
 
 #### Task 1: Implement logic to read a configuration setting from app settings
 
@@ -260,16 +248,6 @@ The main tasks for this exercise are as follows:
 
 ## Exercise 4: Deploy a Console Application to an Azure Function App
 
-### Scenario
-
-Insert Scenario here
-
-The main tasks for this exercise are as follows:
-
-1. 
-
-1. 
-
 #### Task 1: Create Azure Function Project in Visual Studio
 
 1. Create a new **project** for the **Contoso.Events** solution with the following details:
@@ -307,7 +285,6 @@ The main tasks for this exercise are as follows:
 	> **Note**: For example, if your function URL is ``https://20532dmod03func.azurewebsites.net/``, the modifed URL would be ``https://20532dmod03func.azurewebsites.net/api/Function1?name=20532+Student``.
 
 1. Observe that the Function App creates an echo response with the text ``Hello, 20532 Student``.
-
 
 ## Exercise 5: Cleanup Subscription
 

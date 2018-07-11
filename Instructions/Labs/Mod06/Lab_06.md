@@ -4,37 +4,41 @@
 
 ### Scenario
 
-Insert scenario here
+Even though event registrations could be stored in SQL, you have a unique need. Each event requires a different registration form that can be changed at any time. Essentially, registrations could be of any schema. A relational database such as SQL requires a well-defined schema. Because of your business requirement, you require a database that can store items with flexible structures (or schemas). To facilitate this you have elected to use Azure Cosmos DB for your event registrations.
 
 ### Objectives
 
 After you complete this lab, you will be able to:
 
-- Task 1
+- Configure an Azure Cosmos DB Account
 
-- Task 2
-
-- Task 3
+- Use Azure Cosmos DB in a .NET Application
 
 ### Lab Setup
 
 - *Estimated Time*: 90 minutes
 
-For this lab, you will use the available host machine. Before you begin this lab, you must complete the following steps:
+Before starting this lab, you must complete the lab in Module 2. For the lab in this module, you will use the available host machine. Also, you must complete the following steps:
 
-1. Setup 1
+1.  On the host computer, click **Start**, type **Remote**, and then click **Remote Desktop Connection**.
+
+1.  In Remote Desktop Connection, provide the name of your virtual machine in the **Computer** box by using the following format:
+
+    -   **[Your VM IP Address]:[*Your VM RDP Port*]**
+
+    > **Note:** The name and port for your virtual machine might be saved in the Computer drop-down list. If this is the case, use this value instead of typing it in manually. If you are unsure about your virtual machine’s RDP port, use either of the Azure portals to find your virtual machine’s endpoints. The endpoint with the name **Remote Desktop** is the correct port for RDP. This port is randomized to protect your virtual machine from unauthorized access.
+
+1.  In Remote Desktop Connection, click **Connect**. Wait until the RDP client accesses the virtual machine.
+
+1.  If necessary, sign in by using the following credentials:
+
+    -   User name: **Student**
+
+    -   Password: **AzurePa$$w0rd**
+
+1.  Verify that you received the credentials to sign in to the Azure portal from your training provider. You will use these credentials and the Azure account throughout the labs in this course.
 
 ## Exercise 1: Populating the Sign-In Form with Registrant Names
-
-### Scenario
-
-Insert Scenario here
-
-The main tasks for this exercise are as follows:
-
-1. Sign in to the Azure Portal.
-
-1. 
 
 #### Task 1: Sign in to the Azure Portal
 
@@ -210,14 +214,6 @@ The main tasks for this exercise are as follows:
 1. Save the **ProcessDocuments.cs** file.
 
 ## Exercise 2: Updating the Events Website to use Azure Cosmos DB
-
-### Scenario
-
-Insert Scenario here
-
-The main tasks for this exercise are as follows:
-
-1. 
 
 #### Task 1: Implement RegistrationContext class
 
