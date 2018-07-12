@@ -1,4 +1,4 @@
-# Module 7: Storing and Consuming Files from Azure Storage
+﻿# Module 7: Storing and Consuming Files from Azure Storage
 
 # Lab: Storing Generated Documents in Azure Storage Blobs
 
@@ -212,7 +212,7 @@ Before starting this lab, you must complete the lab in Module 2. For the lab in 
             stream.Seek(0, SeekOrigin.Begin);
             await blob.UploadFromStreamAsync(stream);
 
-            return blob;
+            return new DownloadPayload { Stream = blobStream, ContentType = blob.Properties.ContentType };
         }
 	```
 
