@@ -88,7 +88,7 @@ For this lab, you will use the available host machine. Before you begin this lab
 
 1. View the list of virtual machines for your subscription.
 
-1. Go to the Virtual Machine gallery and select the **Visual Studio Community 2017 on Windows Server 2016 (x64)** template.
+1. Go to the Virtual Machine gallery and select the **Visual Studio Community 2017 (latest release) on Windows Server 2016 (x64)** template.
 
 1. Create a new virtual machine using the template and the following details:
 
