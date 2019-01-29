@@ -174,7 +174,7 @@ Before starting this lab, you must complete the lab in Module 2. For the lab in 
 	{
 		await eventsContext.Database.EnsureCreatedAsync();
 
-		a. (!await eventsContext.Events.AnyAsync())
+		if (!await eventsContext.Events.AnyAsync())
 		{
 			Event eventItem = new Event();
 			eventItem.EventKey = "FY17SepGeneralConference";
