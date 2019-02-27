@@ -212,7 +212,7 @@ Before starting this lab, you must complete the lab in Module 2. For the lab in 
             stream.Seek(0, SeekOrigin.Begin);
             await blob.UploadFromStreamAsync(stream);
 
-            return new DownloadPayload { Stream = blobStream, ContentType = blob.Properties.ContentType };
+            return blob;
         }
 	```
 
@@ -270,7 +270,7 @@ Before starting this lab, you must complete the lab in Module 2. For the lab in 
             ICloudBlob blob = container.GetBlockBlobReference(blobId);
             Stream blobStream = await blob.OpenReadAsync(null, null, null);
 
-            return blobStream;
+            return new DownloadPayload { Stream = blobStream, ContentType = blob.Properties.ContentType };
         }
 	```
 
@@ -387,4 +387,4 @@ Before starting this lab, you must complete the lab in Module 2. For the lab in 
 
 1. Close the currently running **Visual Studio** application.
 
-> **Review**: In this exercise, you "cleaned up your subscription" by removing the **Resource Groups** used in this lab.b
+> **Review**: In this exercise, you "cleaned up your subscription" by removing the **Resource Groups** used in this lab.
