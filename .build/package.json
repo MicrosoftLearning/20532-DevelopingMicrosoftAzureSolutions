@@ -14,7 +14,7 @@
     "fs-readdir-recursive": "^1.0.0",
     "marked": "^0.3.6",
     "ncp": "^2.0.0",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.3"
   },
   "configuration": {}
 }
